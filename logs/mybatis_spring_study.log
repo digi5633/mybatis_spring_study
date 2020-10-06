@@ -1,0 +1,77 @@
+[DEBUG] [2020-10-06 11:38] test01SelectDepartmentByAll()
+[DEBUG] [2020-10-06 11:39] test01SelectDepartmentByAll()
+[DEBUG] [2020-10-06 11:39] test01SelectDepartmentByAll()
+[DEBUG] [2020-10-06 11:43] test01SelectDepartmentByAll()
+[DEBUG] [2020-10-06 11:48] test01SelectDepartmentByAll()
+[DEBUG] [2020-10-06 11:48] test02InsertDepartment()
+[DEBUG] [2020-10-06 11:48] test03UpdateDepartment()
+[DEBUG] [2020-10-06 11:48] test04SelectDepartmentByNo()
+[DEBUG] [2020-10-06 11:48] test05DeleteDepartment()
+[DEBUG] [2020-10-06 11:53] test01SelectDepartmentByAll()
+[DEBUG] [2020-10-06 11:53] ==>  Preparing: SELECT DEPTNO, DEPTNAME, FLOOR FROM DEPARTMENT
+[DEBUG] [2020-10-06 11:53] ==> Parameters: 
+[TRACE] [2020-10-06 11:53] <==    Columns: DEPTNO, DEPTNAME, FLOOR
+[TRACE] [2020-10-06 11:53] <==        Row: 1, 영업, 8
+[TRACE] [2020-10-06 11:53] <==        Row: 2, 기획, 10
+[TRACE] [2020-10-06 11:53] <==        Row: 3, 개발, 9
+[TRACE] [2020-10-06 11:53] <==        Row: 4, 총무, 7
+[DEBUG] [2020-10-06 11:53] <==      Total: 4
+[DEBUG] [2020-10-06 11:53] test02InsertDepartment()
+[DEBUG] [2020-10-06 11:53] ==>  Preparing: INSERT INTO DEPARTMENT VALUES(?, ?, ?)
+[DEBUG] [2020-10-06 11:53] ==> Parameters: 5(Integer), 마케팅(String), 20(Integer)
+[DEBUG] [2020-10-06 11:53] <==    Updates: 1
+[DEBUG] [2020-10-06 11:53] test03UpdateDepartment()
+[DEBUG] [2020-10-06 11:53] ==>  Preparing: SELECT DEPTNO, DEPTNAME, FLOOR FROM DEPARTMENT
+[DEBUG] [2020-10-06 11:53] ==> Parameters: 
+[TRACE] [2020-10-06 11:53] <==    Columns: DEPTNO, DEPTNAME, FLOOR
+[TRACE] [2020-10-06 11:53] <==        Row: 1, 영업, 8
+[TRACE] [2020-10-06 11:53] <==        Row: 2, 기획, 10
+[TRACE] [2020-10-06 11:53] <==        Row: 3, 개발, 9
+[TRACE] [2020-10-06 11:53] <==        Row: 4, 총무, 7
+[TRACE] [2020-10-06 11:53] <==        Row: 5, 마케팅, 20
+[DEBUG] [2020-10-06 11:53] <==      Total: 5
+[DEBUG] [2020-10-06 11:53] test04SelectDepartmentByNo()
+[DEBUG] [2020-10-06 11:53] ==>  Preparing: SELECT DEPTNO, DEPTNAME, FLOOR FROM DEPARTMENT WHERE DEPTNO = ?
+[DEBUG] [2020-10-06 11:53] ==> Parameters: 1(Integer)
+[TRACE] [2020-10-06 11:53] <==    Columns: DEPTNO, DEPTNAME, FLOOR
+[TRACE] [2020-10-06 11:53] <==        Row: 1, 영업, 8
+[DEBUG] [2020-10-06 11:53] <==      Total: 1
+[DEBUG] [2020-10-06 11:53] Department [deptNo=1, deptName=영업, floor=8]
+[DEBUG] [2020-10-06 11:53] test05DeleteDepartment()
+[DEBUG] [2020-10-06 11:53] ==>  Preparing: DELETE FROM DEPARTMENT WHERE DEPTNO = ?
+[DEBUG] [2020-10-06 11:53] ==> Parameters: 5(Integer)
+[DEBUG] [2020-10-06 11:53] <==    Updates: 1
+[DEBUG] [2020-10-06 12:07] test01SelectDepartmentByAll()
+[DEBUG] [2020-10-06 12:07] ==>  Preparing: SELECT DEPTNO, DEPTNAME, FLOOR FROM DEPARTMENT
+[DEBUG] [2020-10-06 12:07] ==> Parameters: 
+[TRACE] [2020-10-06 12:07] <==    Columns: DEPTNO, DEPTNAME, FLOOR
+[TRACE] [2020-10-06 12:07] <==        Row: 1, 영업, 8
+[TRACE] [2020-10-06 12:07] <==        Row: 2, 기획, 10
+[TRACE] [2020-10-06 12:07] <==        Row: 3, 개발, 9
+[TRACE] [2020-10-06 12:07] <==        Row: 4, 총무, 7
+[DEBUG] [2020-10-06 12:07] <==      Total: 4
+[DEBUG] [2020-10-06 12:07] test02InsertDepartment()
+[DEBUG] [2020-10-06 12:07] ==>  Preparing: INSERT INTO DEPARTMENT VALUES(?, ?, ?)
+[DEBUG] [2020-10-06 12:07] ==> Parameters: 5(Integer), 마케팅(String), 20(Integer)
+[DEBUG] [2020-10-06 12:07] <==    Updates: 1
+[DEBUG] [2020-10-06 12:07] test03UpdateDepartment()
+[DEBUG] [2020-10-06 12:07] ==>  Preparing: SELECT DEPTNO, DEPTNAME, FLOOR FROM DEPARTMENT
+[DEBUG] [2020-10-06 12:07] ==> Parameters: 
+[TRACE] [2020-10-06 12:07] <==    Columns: DEPTNO, DEPTNAME, FLOOR
+[TRACE] [2020-10-06 12:07] <==        Row: 5, 마케팅, 20
+[TRACE] [2020-10-06 12:07] <==        Row: 1, 영업, 8
+[TRACE] [2020-10-06 12:07] <==        Row: 2, 기획, 10
+[TRACE] [2020-10-06 12:07] <==        Row: 3, 개발, 9
+[TRACE] [2020-10-06 12:07] <==        Row: 4, 총무, 7
+[DEBUG] [2020-10-06 12:07] <==      Total: 5
+[DEBUG] [2020-10-06 12:07] test04SelectDepartmentByNo()
+[DEBUG] [2020-10-06 12:07] ==>  Preparing: SELECT DEPTNO, DEPTNAME, FLOOR FROM DEPARTMENT WHERE DEPTNO = ?
+[DEBUG] [2020-10-06 12:07] ==> Parameters: 1(Integer)
+[TRACE] [2020-10-06 12:07] <==    Columns: DEPTNO, DEPTNAME, FLOOR
+[TRACE] [2020-10-06 12:07] <==        Row: 1, 영업, 8
+[DEBUG] [2020-10-06 12:07] <==      Total: 1
+[DEBUG] [2020-10-06 12:07] Department [deptNo=1, deptName=영업, floor=8]
+[DEBUG] [2020-10-06 12:07] test05DeleteDepartment()
+[DEBUG] [2020-10-06 12:07] ==>  Preparing: DELETE FROM DEPARTMENT WHERE DEPTNO = ?
+[DEBUG] [2020-10-06 12:07] ==> Parameters: 5(Integer)
+[DEBUG] [2020-10-06 12:07] <==    Updates: 1
