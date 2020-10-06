@@ -368,3 +368,1121 @@
 [DEBUG] [2020-10-05 15:38] <==    Updates: 1
 [DEBUG] [2020-10-05 15:38] testDataSource()
 [DEBUG] [2020-10-05 15:38] session org.apache.ibatis.session.defaults.DefaultSqlSession@1dafd9c9
+[DEBUG] [2020-10-06 10:06] testDataSource()
+[DEBUG] [2020-10-06 10:06] DataSource HikariDataSource (HikariPool-1)
+[DEBUG] [2020-10-06 10:06] LoginTimeout 30
+[DEBUG] [2020-10-06 10:06] test01SelectDepartmentByAll()
+[DEBUG] [2020-10-06 10:06] ==>  Preparing: SELECT DEPTNO, DEPTNAME, FLOOR FROM DEPARTMENT
+[DEBUG] [2020-10-06 10:06] ==> Parameters: 
+[TRACE] [2020-10-06 10:06] <==    Columns: DEPTNO, DEPTNAME, FLOOR
+[TRACE] [2020-10-06 10:06] <==        Row: 1, 영업, 8
+[TRACE] [2020-10-06 10:06] <==        Row: 2, 기획, 10
+[TRACE] [2020-10-06 10:06] <==        Row: 3, 개발, 9
+[TRACE] [2020-10-06 10:06] <==        Row: 4, 총무, 7
+[DEBUG] [2020-10-06 10:06] <==      Total: 4
+[DEBUG] [2020-10-06 10:06] test02InsertDepartment()
+[DEBUG] [2020-10-06 10:06] ==>  Preparing: INSERT INTO DEPARTMENT VALUES(?, ?, ?)
+[DEBUG] [2020-10-06 10:06] ==> Parameters: 5(Integer), 마케팅(String), 20(Integer)
+[DEBUG] [2020-10-06 10:06] <==    Updates: 1
+[DEBUG] [2020-10-06 10:06] test03UpdateDepartment()
+[DEBUG] [2020-10-06 10:06] ==>  Preparing: UPDATE DEPARTMENT SET DEPTNAME = ?, FLOOR = ? WHERE DEPTNO = ?
+[DEBUG] [2020-10-06 10:06] ==> Parameters: 마케팅2(String), 10(Integer), 5(Integer)
+[DEBUG] [2020-10-06 10:06] <==    Updates: 1
+[DEBUG] [2020-10-06 10:06] test04SelectDepartmentByNo()
+[DEBUG] [2020-10-06 10:06] ==>  Preparing: SELECT DEPTNO, DEPTNAME, FLOOR FROM DEPARTMENT WHERE DEPTNO = 1
+[DEBUG] [2020-10-06 10:06] ==> Parameters: 
+[TRACE] [2020-10-06 10:06] <==    Columns: DEPTNO, DEPTNAME, FLOOR
+[TRACE] [2020-10-06 10:06] <==        Row: 1, 영업, 8
+[DEBUG] [2020-10-06 10:06] <==      Total: 1
+[DEBUG] [2020-10-06 10:06] Department [deptNo=1, deptName=영업, floor=8]
+[DEBUG] [2020-10-06 10:06] test05DeleteDepartment()
+[DEBUG] [2020-10-06 10:06] ==>  Preparing: DELETE FROM DEPARTMENT WHERE DEPTNO = ?
+[DEBUG] [2020-10-06 10:06] ==> Parameters: 5(Integer)
+[DEBUG] [2020-10-06 10:06] <==    Updates: 1
+[DEBUG] [2020-10-06 10:06] test01SelectEmployeeByAll()
+[DEBUG] [2020-10-06 10:06] ==>  Preparing: SELECT EMPNO, EMPNAME, TITLE, MANAGER, SALARY, DNO FROM EMPLOYEE
+[DEBUG] [2020-10-06 10:06] ==> Parameters: 
+[TRACE] [2020-10-06 10:06] <==    Columns: EMPNO, EMPNAME, TITLE, MANAGER, SALARY, DNO
+[TRACE] [2020-10-06 10:06] <==        Row: 4377, 이성래, 1, null, 5000000, 2
+[TRACE] [2020-10-06 10:06] <==        Row: 3426, 박영권, 3, 4377, 3000000, 1
+[TRACE] [2020-10-06 10:06] <==        Row: 3011, 이수민, 2, 4377, 4000000, 3
+[TRACE] [2020-10-06 10:06] <==        Row: 3427, 최종철, 5, 3011, 1500000, 3
+[TRACE] [2020-10-06 10:06] <==        Row: 1003, 조민희, 3, 4377, 3000000, 2
+[TRACE] [2020-10-06 10:06] <==        Row: 2106, 김창섭, 4, 1003, 2500000, 2
+[TRACE] [2020-10-06 10:06] <==        Row: 1365, 김상원, 5, 3426, 1500000, 1
+[DEBUG] [2020-10-06 10:06] <==      Total: 7
+[DEBUG] [2020-10-06 10:06] test02InsertEmployee()
+[DEBUG] [2020-10-06 10:06] ==>  Preparing: INSERT INTO EMPLOYEE(EMPNO, EMPNAME, TITLE, MANAGER, SALARY, DNO) VALUES (?, ?, ?, ?, ?, ?)
+[DEBUG] [2020-10-06 10:06] ==> Parameters: 1004(Integer), 김자바(String), 1(String), 4377(Integer), 3000000(Integer), 1(Integer)
+[DEBUG] [2020-10-06 10:06] <==    Updates: 1
+[DEBUG] [2020-10-06 10:06] test03UpdateEmployee()
+[DEBUG] [2020-10-06 10:06] ==>  Preparing: UPDATE EMPLOYEE SET EMPNAME = ?, TITLE = ?, MANAGER = ?, SALARY = ?, DNO = ? WHERE EMPNO = ?
+[DEBUG] [2020-10-06 10:06] ==> Parameters: 김김김(String), 2(String), 1003(Integer), 2000000(Integer), 2(Integer), 1004(Integer)
+[DEBUG] [2020-10-06 10:06] <==    Updates: 1
+[DEBUG] [2020-10-06 10:06] test04SelectEmployeeByNo()
+[DEBUG] [2020-10-06 10:06] ==>  Preparing: SELECT EMPNO, EMPNAME, TITLE, MANAGER, SALARY, DNO FROM EMPLOYEE WHERE EMPNO = 4377
+[DEBUG] [2020-10-06 10:06] ==> Parameters: 
+[TRACE] [2020-10-06 10:06] <==    Columns: EMPNO, EMPNAME, TITLE, MANAGER, SALARY, DNO
+[TRACE] [2020-10-06 10:06] <==        Row: 4377, 이성래, 1, null, 5000000, 2
+[DEBUG] [2020-10-06 10:06] <==      Total: 1
+[DEBUG] [2020-10-06 10:06] Employee [empNo=4377, empName=이성래, title=1, manager=null, salary=5000000, dept=null]
+[DEBUG] [2020-10-06 10:06] test05DeleteEmployee()
+[DEBUG] [2020-10-06 10:06] ==>  Preparing: DELETE FROM EMPLOYEE WHERE EMPNO = ?
+[DEBUG] [2020-10-06 10:06] ==> Parameters: 1004(Integer)
+[DEBUG] [2020-10-06 10:06] <==    Updates: 1
+[DEBUG] [2020-10-06 10:06] testARegisterTransaction_Dept_Fail()
+[DEBUG] [2020-10-06 10:06] ==>  Preparing: INSERT INTO DEPARTMENT VALUES(?, ?, ?)
+[DEBUG] [2020-10-06 10:06] ==> Parameters: 1(Integer), 태스크포스(String), 10(Integer)
+[DEBUG] [2020-10-06 10:06] testDataSource()
+[DEBUG] [2020-10-06 10:06] session org.apache.ibatis.session.defaults.DefaultSqlSession@753b8113
+[DEBUG] [2020-10-06 10:09] testARegisterTransaction_Dept_Fail()
+[DEBUG] [2020-10-06 10:09] ==>  Preparing: INSERT INTO DEPARTMENT VALUES(?, ?, ?)
+[DEBUG] [2020-10-06 10:09] ==> Parameters: 1(Integer), 태스크포스(String), 10(Integer)
+[DEBUG] [2020-10-06 10:09] testDataSource()
+[DEBUG] [2020-10-06 10:09] DataSource HikariDataSource (HikariPool-1)
+[DEBUG] [2020-10-06 10:09] LoginTimeout 30
+[DEBUG] [2020-10-06 10:09] test01SelectDepartmentByAll()
+[DEBUG] [2020-10-06 10:09] ==>  Preparing: SELECT DEPTNO, DEPTNAME, FLOOR FROM DEPARTMENT
+[DEBUG] [2020-10-06 10:09] ==> Parameters: 
+[TRACE] [2020-10-06 10:09] <==    Columns: DEPTNO, DEPTNAME, FLOOR
+[TRACE] [2020-10-06 10:09] <==        Row: 1, 영업, 8
+[TRACE] [2020-10-06 10:09] <==        Row: 2, 기획, 10
+[TRACE] [2020-10-06 10:09] <==        Row: 3, 개발, 9
+[TRACE] [2020-10-06 10:09] <==        Row: 4, 총무, 7
+[DEBUG] [2020-10-06 10:09] <==      Total: 4
+[DEBUG] [2020-10-06 10:09] test02InsertDepartment()
+[DEBUG] [2020-10-06 10:09] ==>  Preparing: INSERT INTO DEPARTMENT VALUES(?, ?, ?)
+[DEBUG] [2020-10-06 10:09] ==> Parameters: 5(Integer), 마케팅(String), 20(Integer)
+[DEBUG] [2020-10-06 10:09] <==    Updates: 1
+[DEBUG] [2020-10-06 10:09] test03UpdateDepartment()
+[DEBUG] [2020-10-06 10:09] ==>  Preparing: UPDATE DEPARTMENT SET DEPTNAME = ?, FLOOR = ? WHERE DEPTNO = ?
+[DEBUG] [2020-10-06 10:09] ==> Parameters: 마케팅2(String), 10(Integer), 5(Integer)
+[DEBUG] [2020-10-06 10:09] <==    Updates: 1
+[DEBUG] [2020-10-06 10:09] test04SelectDepartmentByNo()
+[DEBUG] [2020-10-06 10:09] ==>  Preparing: SELECT DEPTNO, DEPTNAME, FLOOR FROM DEPARTMENT WHERE DEPTNO = 1
+[DEBUG] [2020-10-06 10:09] ==> Parameters: 
+[TRACE] [2020-10-06 10:09] <==    Columns: DEPTNO, DEPTNAME, FLOOR
+[TRACE] [2020-10-06 10:09] <==        Row: 1, 영업, 8
+[DEBUG] [2020-10-06 10:09] <==      Total: 1
+[DEBUG] [2020-10-06 10:09] Department [deptNo=1, deptName=영업, floor=8]
+[DEBUG] [2020-10-06 10:09] test05DeleteDepartment()
+[DEBUG] [2020-10-06 10:09] ==>  Preparing: DELETE FROM DEPARTMENT WHERE DEPTNO = ?
+[DEBUG] [2020-10-06 10:09] ==> Parameters: 5(Integer)
+[DEBUG] [2020-10-06 10:09] <==    Updates: 1
+[DEBUG] [2020-10-06 10:09] test01SelectEmployeeByAll()
+[DEBUG] [2020-10-06 10:09] ==>  Preparing: SELECT EMPNO, EMPNAME, TITLE, MANAGER, SALARY, DNO FROM EMPLOYEE
+[DEBUG] [2020-10-06 10:09] ==> Parameters: 
+[TRACE] [2020-10-06 10:09] <==    Columns: EMPNO, EMPNAME, TITLE, MANAGER, SALARY, DNO
+[TRACE] [2020-10-06 10:09] <==        Row: 4377, 이성래, 1, null, 5000000, 2
+[TRACE] [2020-10-06 10:09] <==        Row: 3426, 박영권, 3, 4377, 3000000, 1
+[TRACE] [2020-10-06 10:09] <==        Row: 3011, 이수민, 2, 4377, 4000000, 3
+[TRACE] [2020-10-06 10:09] <==        Row: 3427, 최종철, 5, 3011, 1500000, 3
+[TRACE] [2020-10-06 10:09] <==        Row: 1003, 조민희, 3, 4377, 3000000, 2
+[TRACE] [2020-10-06 10:09] <==        Row: 2106, 김창섭, 4, 1003, 2500000, 2
+[TRACE] [2020-10-06 10:09] <==        Row: 1365, 김상원, 5, 3426, 1500000, 1
+[DEBUG] [2020-10-06 10:09] <==      Total: 7
+[DEBUG] [2020-10-06 10:09] test02InsertEmployee()
+[DEBUG] [2020-10-06 10:09] ==>  Preparing: INSERT INTO EMPLOYEE(EMPNO, EMPNAME, TITLE, MANAGER, SALARY, DNO) VALUES (?, ?, ?, ?, ?, ?)
+[DEBUG] [2020-10-06 10:09] ==> Parameters: 1004(Integer), 김자바(String), 1(String), 4377(Integer), 3000000(Integer), 1(Integer)
+[DEBUG] [2020-10-06 10:09] <==    Updates: 1
+[DEBUG] [2020-10-06 10:09] test03UpdateEmployee()
+[DEBUG] [2020-10-06 10:09] ==>  Preparing: UPDATE EMPLOYEE SET EMPNAME = ?, TITLE = ?, MANAGER = ?, SALARY = ?, DNO = ? WHERE EMPNO = ?
+[DEBUG] [2020-10-06 10:09] ==> Parameters: 김김김(String), 2(String), 1003(Integer), 2000000(Integer), 2(Integer), 1004(Integer)
+[DEBUG] [2020-10-06 10:09] <==    Updates: 1
+[DEBUG] [2020-10-06 10:09] test04SelectEmployeeByNo()
+[DEBUG] [2020-10-06 10:09] ==>  Preparing: SELECT EMPNO, EMPNAME, TITLE, MANAGER, SALARY, DNO FROM EMPLOYEE WHERE EMPNO = 4377
+[DEBUG] [2020-10-06 10:09] ==> Parameters: 
+[TRACE] [2020-10-06 10:09] <==    Columns: EMPNO, EMPNAME, TITLE, MANAGER, SALARY, DNO
+[TRACE] [2020-10-06 10:09] <==        Row: 4377, 이성래, 1, null, 5000000, 2
+[DEBUG] [2020-10-06 10:09] <==      Total: 1
+[DEBUG] [2020-10-06 10:09] Employee [empNo=4377, empName=이성래, title=1, manager=null, salary=5000000, dept=null]
+[DEBUG] [2020-10-06 10:09] test05DeleteEmployee()
+[DEBUG] [2020-10-06 10:09] ==>  Preparing: DELETE FROM EMPLOYEE WHERE EMPNO = ?
+[DEBUG] [2020-10-06 10:09] ==> Parameters: 1004(Integer)
+[DEBUG] [2020-10-06 10:09] <==    Updates: 1
+[DEBUG] [2020-10-06 10:09] testDataSource()
+[DEBUG] [2020-10-06 10:09] session org.apache.ibatis.session.defaults.DefaultSqlSession@583a7c37
+[DEBUG] [2020-10-06 10:09] testARegisterTransaction_Dept_Fail()
+[DEBUG] [2020-10-06 10:09] ==>  Preparing: INSERT INTO DEPARTMENT VALUES(?, ?, ?)
+[DEBUG] [2020-10-06 10:09] ==> Parameters: 1(Integer), 태스크포스(String), 10(Integer)
+[DEBUG] [2020-10-06 10:09] testDataSource()
+[DEBUG] [2020-10-06 10:09] DataSource HikariDataSource (HikariPool-1)
+[DEBUG] [2020-10-06 10:09] LoginTimeout 30
+[DEBUG] [2020-10-06 10:09] test01SelectDepartmentByAll()
+[DEBUG] [2020-10-06 10:09] ==>  Preparing: SELECT DEPTNO, DEPTNAME, FLOOR FROM DEPARTMENT
+[DEBUG] [2020-10-06 10:09] ==> Parameters: 
+[TRACE] [2020-10-06 10:09] <==    Columns: DEPTNO, DEPTNAME, FLOOR
+[TRACE] [2020-10-06 10:09] <==        Row: 1, 영업, 8
+[TRACE] [2020-10-06 10:09] <==        Row: 2, 기획, 10
+[TRACE] [2020-10-06 10:09] <==        Row: 3, 개발, 9
+[TRACE] [2020-10-06 10:09] <==        Row: 4, 총무, 7
+[DEBUG] [2020-10-06 10:09] <==      Total: 4
+[DEBUG] [2020-10-06 10:09] test02InsertDepartment()
+[DEBUG] [2020-10-06 10:09] ==>  Preparing: INSERT INTO DEPARTMENT VALUES(?, ?, ?)
+[DEBUG] [2020-10-06 10:09] ==> Parameters: 5(Integer), 마케팅(String), 20(Integer)
+[DEBUG] [2020-10-06 10:09] <==    Updates: 1
+[DEBUG] [2020-10-06 10:09] test03UpdateDepartment()
+[DEBUG] [2020-10-06 10:09] ==>  Preparing: UPDATE DEPARTMENT SET DEPTNAME = ?, FLOOR = ? WHERE DEPTNO = ?
+[DEBUG] [2020-10-06 10:09] ==> Parameters: 마케팅2(String), 10(Integer), 5(Integer)
+[DEBUG] [2020-10-06 10:09] <==    Updates: 1
+[DEBUG] [2020-10-06 10:09] test04SelectDepartmentByNo()
+[DEBUG] [2020-10-06 10:09] ==>  Preparing: SELECT DEPTNO, DEPTNAME, FLOOR FROM DEPARTMENT WHERE DEPTNO = 1
+[DEBUG] [2020-10-06 10:09] ==> Parameters: 
+[TRACE] [2020-10-06 10:09] <==    Columns: DEPTNO, DEPTNAME, FLOOR
+[TRACE] [2020-10-06 10:09] <==        Row: 1, 영업, 8
+[DEBUG] [2020-10-06 10:09] <==      Total: 1
+[DEBUG] [2020-10-06 10:09] Department [deptNo=1, deptName=영업, floor=8]
+[DEBUG] [2020-10-06 10:09] test05DeleteDepartment()
+[DEBUG] [2020-10-06 10:09] ==>  Preparing: DELETE FROM DEPARTMENT WHERE DEPTNO = ?
+[DEBUG] [2020-10-06 10:09] ==> Parameters: 5(Integer)
+[DEBUG] [2020-10-06 10:09] <==    Updates: 1
+[DEBUG] [2020-10-06 10:09] test01SelectEmployeeByAll()
+[DEBUG] [2020-10-06 10:09] ==>  Preparing: SELECT EMPNO, EMPNAME, TITLE, MANAGER, SALARY, DNO FROM EMPLOYEE
+[DEBUG] [2020-10-06 10:09] ==> Parameters: 
+[TRACE] [2020-10-06 10:09] <==    Columns: EMPNO, EMPNAME, TITLE, MANAGER, SALARY, DNO
+[TRACE] [2020-10-06 10:09] <==        Row: 4377, 이성래, 1, null, 5000000, 2
+[TRACE] [2020-10-06 10:09] <==        Row: 3426, 박영권, 3, 4377, 3000000, 1
+[TRACE] [2020-10-06 10:09] <==        Row: 3011, 이수민, 2, 4377, 4000000, 3
+[TRACE] [2020-10-06 10:09] <==        Row: 3427, 최종철, 5, 3011, 1500000, 3
+[TRACE] [2020-10-06 10:09] <==        Row: 1003, 조민희, 3, 4377, 3000000, 2
+[TRACE] [2020-10-06 10:09] <==        Row: 2106, 김창섭, 4, 1003, 2500000, 2
+[TRACE] [2020-10-06 10:09] <==        Row: 1365, 김상원, 5, 3426, 1500000, 1
+[DEBUG] [2020-10-06 10:09] <==      Total: 7
+[DEBUG] [2020-10-06 10:09] test02InsertEmployee()
+[DEBUG] [2020-10-06 10:09] ==>  Preparing: INSERT INTO EMPLOYEE(EMPNO, EMPNAME, TITLE, MANAGER, SALARY, DNO) VALUES (?, ?, ?, ?, ?, ?)
+[DEBUG] [2020-10-06 10:09] ==> Parameters: 1004(Integer), 김자바(String), 1(String), 4377(Integer), 3000000(Integer), 1(Integer)
+[DEBUG] [2020-10-06 10:09] <==    Updates: 1
+[DEBUG] [2020-10-06 10:09] test03UpdateEmployee()
+[DEBUG] [2020-10-06 10:09] ==>  Preparing: UPDATE EMPLOYEE SET EMPNAME = ?, TITLE = ?, MANAGER = ?, SALARY = ?, DNO = ? WHERE EMPNO = ?
+[DEBUG] [2020-10-06 10:09] ==> Parameters: 김김김(String), 2(String), 1003(Integer), 2000000(Integer), 2(Integer), 1004(Integer)
+[DEBUG] [2020-10-06 10:09] <==    Updates: 1
+[DEBUG] [2020-10-06 10:09] test04SelectEmployeeByNo()
+[DEBUG] [2020-10-06 10:09] ==>  Preparing: SELECT EMPNO, EMPNAME, TITLE, MANAGER, SALARY, DNO FROM EMPLOYEE WHERE EMPNO = 4377
+[DEBUG] [2020-10-06 10:09] ==> Parameters: 
+[TRACE] [2020-10-06 10:09] <==    Columns: EMPNO, EMPNAME, TITLE, MANAGER, SALARY, DNO
+[TRACE] [2020-10-06 10:09] <==        Row: 4377, 이성래, 1, null, 5000000, 2
+[DEBUG] [2020-10-06 10:09] <==      Total: 1
+[DEBUG] [2020-10-06 10:09] Employee [empNo=4377, empName=이성래, title=1, manager=null, salary=5000000, dept=null]
+[DEBUG] [2020-10-06 10:09] test05DeleteEmployee()
+[DEBUG] [2020-10-06 10:09] ==>  Preparing: DELETE FROM EMPLOYEE WHERE EMPNO = ?
+[DEBUG] [2020-10-06 10:09] ==> Parameters: 1004(Integer)
+[DEBUG] [2020-10-06 10:09] <==    Updates: 1
+[DEBUG] [2020-10-06 10:09] testDataSource()
+[DEBUG] [2020-10-06 10:09] session org.apache.ibatis.session.defaults.DefaultSqlSession@15c91ddc
+[DEBUG] [2020-10-06 10:11] testARegisterTransaction_Dept_Fail()
+[DEBUG] [2020-10-06 10:11] ==>  Preparing: INSERT INTO DEPARTMENT VALUES(?, ?, ?)
+[DEBUG] [2020-10-06 10:11] ==> Parameters: 1(Integer), 태스크포스(String), 10(Integer)
+[DEBUG] [2020-10-06 10:11] testBRegisterTransaction_Emp_Fail()
+[DEBUG] [2020-10-06 10:11] ==>  Preparing: INSERT INTO DEPARTMENT VALUES(?, ?, ?)
+[DEBUG] [2020-10-06 10:11] ==> Parameters: 6(Integer), 태스크포스(String), 10(Integer)
+[DEBUG] [2020-10-06 10:11] <==    Updates: 1
+[DEBUG] [2020-10-06 10:11] ==>  Preparing: INSERT INTO EMPLOYEE(EMPNO, EMPNAME, TITLE, MANAGER, SALARY, DNO) VALUES (?, ?, ?, ?, ?, ?)
+[DEBUG] [2020-10-06 10:11] ==> Parameters: 4377(Integer), 박신혜(String), 과장(String), 4377(Integer), 4100000(Integer), 6(Integer)
+[DEBUG] [2020-10-06 10:11] testDataSource()
+[DEBUG] [2020-10-06 10:11] DataSource HikariDataSource (HikariPool-1)
+[DEBUG] [2020-10-06 10:11] LoginTimeout 30
+[DEBUG] [2020-10-06 10:11] test01SelectDepartmentByAll()
+[DEBUG] [2020-10-06 10:11] ==>  Preparing: SELECT DEPTNO, DEPTNAME, FLOOR FROM DEPARTMENT
+[DEBUG] [2020-10-06 10:11] ==> Parameters: 
+[TRACE] [2020-10-06 10:11] <==    Columns: DEPTNO, DEPTNAME, FLOOR
+[TRACE] [2020-10-06 10:11] <==        Row: 1, 영업, 8
+[TRACE] [2020-10-06 10:11] <==        Row: 2, 기획, 10
+[TRACE] [2020-10-06 10:11] <==        Row: 3, 개발, 9
+[TRACE] [2020-10-06 10:11] <==        Row: 4, 총무, 7
+[DEBUG] [2020-10-06 10:11] <==      Total: 4
+[DEBUG] [2020-10-06 10:11] test02InsertDepartment()
+[DEBUG] [2020-10-06 10:11] ==>  Preparing: INSERT INTO DEPARTMENT VALUES(?, ?, ?)
+[DEBUG] [2020-10-06 10:11] ==> Parameters: 5(Integer), 마케팅(String), 20(Integer)
+[DEBUG] [2020-10-06 10:11] <==    Updates: 1
+[DEBUG] [2020-10-06 10:11] test03UpdateDepartment()
+[DEBUG] [2020-10-06 10:11] ==>  Preparing: UPDATE DEPARTMENT SET DEPTNAME = ?, FLOOR = ? WHERE DEPTNO = ?
+[DEBUG] [2020-10-06 10:11] ==> Parameters: 마케팅2(String), 10(Integer), 5(Integer)
+[DEBUG] [2020-10-06 10:11] <==    Updates: 1
+[DEBUG] [2020-10-06 10:11] test04SelectDepartmentByNo()
+[DEBUG] [2020-10-06 10:11] ==>  Preparing: SELECT DEPTNO, DEPTNAME, FLOOR FROM DEPARTMENT WHERE DEPTNO = 1
+[DEBUG] [2020-10-06 10:11] ==> Parameters: 
+[TRACE] [2020-10-06 10:11] <==    Columns: DEPTNO, DEPTNAME, FLOOR
+[TRACE] [2020-10-06 10:11] <==        Row: 1, 영업, 8
+[DEBUG] [2020-10-06 10:11] <==      Total: 1
+[DEBUG] [2020-10-06 10:11] Department [deptNo=1, deptName=영업, floor=8]
+[DEBUG] [2020-10-06 10:11] test05DeleteDepartment()
+[DEBUG] [2020-10-06 10:11] ==>  Preparing: DELETE FROM DEPARTMENT WHERE DEPTNO = ?
+[DEBUG] [2020-10-06 10:11] ==> Parameters: 5(Integer)
+[DEBUG] [2020-10-06 10:11] <==    Updates: 1
+[DEBUG] [2020-10-06 10:11] test01SelectEmployeeByAll()
+[DEBUG] [2020-10-06 10:11] ==>  Preparing: SELECT EMPNO, EMPNAME, TITLE, MANAGER, SALARY, DNO FROM EMPLOYEE
+[DEBUG] [2020-10-06 10:11] ==> Parameters: 
+[TRACE] [2020-10-06 10:11] <==    Columns: EMPNO, EMPNAME, TITLE, MANAGER, SALARY, DNO
+[TRACE] [2020-10-06 10:11] <==        Row: 4377, 이성래, 1, null, 5000000, 2
+[TRACE] [2020-10-06 10:11] <==        Row: 3426, 박영권, 3, 4377, 3000000, 1
+[TRACE] [2020-10-06 10:11] <==        Row: 3011, 이수민, 2, 4377, 4000000, 3
+[TRACE] [2020-10-06 10:11] <==        Row: 3427, 최종철, 5, 3011, 1500000, 3
+[TRACE] [2020-10-06 10:11] <==        Row: 1003, 조민희, 3, 4377, 3000000, 2
+[TRACE] [2020-10-06 10:11] <==        Row: 2106, 김창섭, 4, 1003, 2500000, 2
+[TRACE] [2020-10-06 10:11] <==        Row: 1365, 김상원, 5, 3426, 1500000, 1
+[DEBUG] [2020-10-06 10:11] <==      Total: 7
+[DEBUG] [2020-10-06 10:11] test02InsertEmployee()
+[DEBUG] [2020-10-06 10:11] ==>  Preparing: INSERT INTO EMPLOYEE(EMPNO, EMPNAME, TITLE, MANAGER, SALARY, DNO) VALUES (?, ?, ?, ?, ?, ?)
+[DEBUG] [2020-10-06 10:11] ==> Parameters: 1004(Integer), 김자바(String), 1(String), 4377(Integer), 3000000(Integer), 1(Integer)
+[DEBUG] [2020-10-06 10:11] <==    Updates: 1
+[DEBUG] [2020-10-06 10:11] test03UpdateEmployee()
+[DEBUG] [2020-10-06 10:11] ==>  Preparing: UPDATE EMPLOYEE SET EMPNAME = ?, TITLE = ?, MANAGER = ?, SALARY = ?, DNO = ? WHERE EMPNO = ?
+[DEBUG] [2020-10-06 10:11] ==> Parameters: 김김김(String), 2(String), 1003(Integer), 2000000(Integer), 2(Integer), 1004(Integer)
+[DEBUG] [2020-10-06 10:11] <==    Updates: 1
+[DEBUG] [2020-10-06 10:11] test04SelectEmployeeByNo()
+[DEBUG] [2020-10-06 10:11] ==>  Preparing: SELECT EMPNO, EMPNAME, TITLE, MANAGER, SALARY, DNO FROM EMPLOYEE WHERE EMPNO = 4377
+[DEBUG] [2020-10-06 10:11] ==> Parameters: 
+[TRACE] [2020-10-06 10:11] <==    Columns: EMPNO, EMPNAME, TITLE, MANAGER, SALARY, DNO
+[TRACE] [2020-10-06 10:11] <==        Row: 4377, 이성래, 1, null, 5000000, 2
+[DEBUG] [2020-10-06 10:11] <==      Total: 1
+[DEBUG] [2020-10-06 10:11] Employee [empNo=4377, empName=이성래, title=1, manager=null, salary=5000000, dept=null]
+[DEBUG] [2020-10-06 10:11] test05DeleteEmployee()
+[DEBUG] [2020-10-06 10:11] ==>  Preparing: DELETE FROM EMPLOYEE WHERE EMPNO = ?
+[DEBUG] [2020-10-06 10:11] ==> Parameters: 1004(Integer)
+[DEBUG] [2020-10-06 10:11] <==    Updates: 1
+[DEBUG] [2020-10-06 10:11] testDataSource()
+[DEBUG] [2020-10-06 10:11] session org.apache.ibatis.session.defaults.DefaultSqlSession@f347f8b
+[DEBUG] [2020-10-06 10:13] testARegisterTransaction_Dept_Fail()
+[DEBUG] [2020-10-06 10:13] ==>  Preparing: INSERT INTO DEPARTMENT VALUES(?, ?, ?)
+[DEBUG] [2020-10-06 10:13] ==> Parameters: 1(Integer), 태스크포스(String), 10(Integer)
+[DEBUG] [2020-10-06 10:13] testBRegisterTransaction_Emp_Fail()
+[DEBUG] [2020-10-06 10:13] ==>  Preparing: INSERT INTO DEPARTMENT VALUES(?, ?, ?)
+[DEBUG] [2020-10-06 10:13] ==> Parameters: 6(Integer), 태스크포스(String), 10(Integer)
+[DEBUG] [2020-10-06 10:13] <==    Updates: 1
+[DEBUG] [2020-10-06 10:13] ==>  Preparing: INSERT INTO EMPLOYEE(EMPNO, EMPNAME, TITLE, MANAGER, SALARY, DNO) VALUES (?, ?, ?, ?, ?, ?)
+[DEBUG] [2020-10-06 10:13] ==> Parameters: 4377(Integer), 박신혜(String), 과장(String), 4377(Integer), 4100000(Integer), 6(Integer)
+[DEBUG] [2020-10-06 10:13] testCRegisterTransaction_Success()
+[DEBUG] [2020-10-06 10:13] ==>  Preparing: INSERT INTO DEPARTMENT VALUES(?, ?, ?)
+[DEBUG] [2020-10-06 10:13] ==> Parameters: 6(Integer), 태스크포스(String), 10(Integer)
+[DEBUG] [2020-10-06 10:13] <==    Updates: 1
+[DEBUG] [2020-10-06 10:13] ==>  Preparing: INSERT INTO EMPLOYEE(EMPNO, EMPNAME, TITLE, MANAGER, SALARY, DNO) VALUES (?, ?, ?, ?, ?, ?)
+[DEBUG] [2020-10-06 10:13] ==> Parameters: 1005(Integer), 박신혜(String), 과장(String), 4377(Integer), 4100000(Integer), 6(Integer)
+[DEBUG] [2020-10-06 10:13] <==    Updates: 1
+[DEBUG] [2020-10-06 10:13] testDataSource()
+[DEBUG] [2020-10-06 10:13] DataSource HikariDataSource (HikariPool-1)
+[DEBUG] [2020-10-06 10:13] LoginTimeout 30
+[DEBUG] [2020-10-06 10:13] test01SelectDepartmentByAll()
+[DEBUG] [2020-10-06 10:13] ==>  Preparing: SELECT DEPTNO, DEPTNAME, FLOOR FROM DEPARTMENT
+[DEBUG] [2020-10-06 10:13] ==> Parameters: 
+[TRACE] [2020-10-06 10:13] <==    Columns: DEPTNO, DEPTNAME, FLOOR
+[TRACE] [2020-10-06 10:13] <==        Row: 1, 영업, 8
+[TRACE] [2020-10-06 10:13] <==        Row: 2, 기획, 10
+[TRACE] [2020-10-06 10:13] <==        Row: 3, 개발, 9
+[TRACE] [2020-10-06 10:13] <==        Row: 4, 총무, 7
+[TRACE] [2020-10-06 10:13] <==        Row: 6, 태스크포스, 10
+[DEBUG] [2020-10-06 10:13] <==      Total: 5
+[DEBUG] [2020-10-06 10:13] test02InsertDepartment()
+[DEBUG] [2020-10-06 10:13] ==>  Preparing: INSERT INTO DEPARTMENT VALUES(?, ?, ?)
+[DEBUG] [2020-10-06 10:13] ==> Parameters: 5(Integer), 마케팅(String), 20(Integer)
+[DEBUG] [2020-10-06 10:13] <==    Updates: 1
+[DEBUG] [2020-10-06 10:13] test03UpdateDepartment()
+[DEBUG] [2020-10-06 10:13] ==>  Preparing: UPDATE DEPARTMENT SET DEPTNAME = ?, FLOOR = ? WHERE DEPTNO = ?
+[DEBUG] [2020-10-06 10:13] ==> Parameters: 마케팅2(String), 10(Integer), 5(Integer)
+[DEBUG] [2020-10-06 10:13] <==    Updates: 1
+[DEBUG] [2020-10-06 10:13] test04SelectDepartmentByNo()
+[DEBUG] [2020-10-06 10:13] ==>  Preparing: SELECT DEPTNO, DEPTNAME, FLOOR FROM DEPARTMENT WHERE DEPTNO = 1
+[DEBUG] [2020-10-06 10:13] ==> Parameters: 
+[TRACE] [2020-10-06 10:13] <==    Columns: DEPTNO, DEPTNAME, FLOOR
+[TRACE] [2020-10-06 10:13] <==        Row: 1, 영업, 8
+[DEBUG] [2020-10-06 10:13] <==      Total: 1
+[DEBUG] [2020-10-06 10:13] Department [deptNo=1, deptName=영업, floor=8]
+[DEBUG] [2020-10-06 10:13] test05DeleteDepartment()
+[DEBUG] [2020-10-06 10:13] ==>  Preparing: DELETE FROM DEPARTMENT WHERE DEPTNO = ?
+[DEBUG] [2020-10-06 10:13] ==> Parameters: 5(Integer)
+[DEBUG] [2020-10-06 10:13] <==    Updates: 1
+[DEBUG] [2020-10-06 10:13] test01SelectEmployeeByAll()
+[DEBUG] [2020-10-06 10:13] ==>  Preparing: SELECT EMPNO, EMPNAME, TITLE, MANAGER, SALARY, DNO FROM EMPLOYEE
+[DEBUG] [2020-10-06 10:13] ==> Parameters: 
+[TRACE] [2020-10-06 10:13] <==    Columns: EMPNO, EMPNAME, TITLE, MANAGER, SALARY, DNO
+[TRACE] [2020-10-06 10:13] <==        Row: 4377, 이성래, 1, null, 5000000, 2
+[TRACE] [2020-10-06 10:13] <==        Row: 3426, 박영권, 3, 4377, 3000000, 1
+[TRACE] [2020-10-06 10:13] <==        Row: 3011, 이수민, 2, 4377, 4000000, 3
+[TRACE] [2020-10-06 10:13] <==        Row: 3427, 최종철, 5, 3011, 1500000, 3
+[TRACE] [2020-10-06 10:13] <==        Row: 1003, 조민희, 3, 4377, 3000000, 2
+[TRACE] [2020-10-06 10:13] <==        Row: 2106, 김창섭, 4, 1003, 2500000, 2
+[TRACE] [2020-10-06 10:13] <==        Row: 1365, 김상원, 5, 3426, 1500000, 1
+[TRACE] [2020-10-06 10:13] <==        Row: 1005, 박신혜, 과장, 4377, 4100000, 6
+[DEBUG] [2020-10-06 10:13] <==      Total: 8
+[DEBUG] [2020-10-06 10:13] test02InsertEmployee()
+[DEBUG] [2020-10-06 10:13] ==>  Preparing: INSERT INTO EMPLOYEE(EMPNO, EMPNAME, TITLE, MANAGER, SALARY, DNO) VALUES (?, ?, ?, ?, ?, ?)
+[DEBUG] [2020-10-06 10:13] ==> Parameters: 1004(Integer), 김자바(String), 1(String), 4377(Integer), 3000000(Integer), 1(Integer)
+[DEBUG] [2020-10-06 10:13] <==    Updates: 1
+[DEBUG] [2020-10-06 10:13] test03UpdateEmployee()
+[DEBUG] [2020-10-06 10:13] ==>  Preparing: UPDATE EMPLOYEE SET EMPNAME = ?, TITLE = ?, MANAGER = ?, SALARY = ?, DNO = ? WHERE EMPNO = ?
+[DEBUG] [2020-10-06 10:13] ==> Parameters: 김김김(String), 2(String), 1003(Integer), 2000000(Integer), 2(Integer), 1004(Integer)
+[DEBUG] [2020-10-06 10:13] <==    Updates: 1
+[DEBUG] [2020-10-06 10:13] test04SelectEmployeeByNo()
+[DEBUG] [2020-10-06 10:13] ==>  Preparing: SELECT EMPNO, EMPNAME, TITLE, MANAGER, SALARY, DNO FROM EMPLOYEE WHERE EMPNO = 4377
+[DEBUG] [2020-10-06 10:13] ==> Parameters: 
+[TRACE] [2020-10-06 10:13] <==    Columns: EMPNO, EMPNAME, TITLE, MANAGER, SALARY, DNO
+[TRACE] [2020-10-06 10:13] <==        Row: 4377, 이성래, 1, null, 5000000, 2
+[DEBUG] [2020-10-06 10:13] <==      Total: 1
+[DEBUG] [2020-10-06 10:13] Employee [empNo=4377, empName=이성래, title=1, manager=null, salary=5000000, dept=null]
+[DEBUG] [2020-10-06 10:13] test05DeleteEmployee()
+[DEBUG] [2020-10-06 10:13] ==>  Preparing: DELETE FROM EMPLOYEE WHERE EMPNO = ?
+[DEBUG] [2020-10-06 10:13] ==> Parameters: 1004(Integer)
+[DEBUG] [2020-10-06 10:13] <==    Updates: 1
+[DEBUG] [2020-10-06 10:13] testDataSource()
+[DEBUG] [2020-10-06 10:13] session org.apache.ibatis.session.defaults.DefaultSqlSession@3ad12a5b
+[DEBUG] [2020-10-06 10:19] testARegisterTransaction_Dept_Fail()
+[DEBUG] [2020-10-06 10:19] ==>  Preparing: INSERT INTO DEPARTMENT VALUES(?, ?, ?)
+[DEBUG] [2020-10-06 10:19] ==> Parameters: 1(Integer), 태스크포스(String), 10(Integer)
+[DEBUG] [2020-10-06 10:19] testBRegisterTransaction_Emp_Fail()
+[DEBUG] [2020-10-06 10:19] ==>  Preparing: INSERT INTO DEPARTMENT VALUES(?, ?, ?)
+[DEBUG] [2020-10-06 10:19] ==> Parameters: 6(Integer), 태스크포스(String), 10(Integer)
+[DEBUG] [2020-10-06 10:19] testCRegisterTransaction_Success()
+[DEBUG] [2020-10-06 10:19] ==>  Preparing: INSERT INTO DEPARTMENT VALUES(?, ?, ?)
+[DEBUG] [2020-10-06 10:19] ==> Parameters: 6(Integer), 태스크포스(String), 10(Integer)
+[DEBUG] [2020-10-06 10:19] testDUnRegisterTransaction_Dept_Fail()
+[DEBUG] [2020-10-06 10:19] ==>  Preparing: DELETE FROM EMPLOYEE WHERE EMPNO = ?
+[DEBUG] [2020-10-06 10:19] ==> Parameters: 1005(Integer)
+[DEBUG] [2020-10-06 10:19] <==    Updates: 1
+[DEBUG] [2020-10-06 10:19] ==>  Preparing: DELETE FROM DEPARTMENT WHERE DEPTNO = ?
+[DEBUG] [2020-10-06 10:19] ==> Parameters: 100(Integer)
+[DEBUG] [2020-10-06 10:19] <==    Updates: 0
+[DEBUG] [2020-10-06 10:19] testDataSource()
+[DEBUG] [2020-10-06 10:19] DataSource HikariDataSource (HikariPool-1)
+[DEBUG] [2020-10-06 10:19] LoginTimeout 30
+[DEBUG] [2020-10-06 10:19] test01SelectDepartmentByAll()
+[DEBUG] [2020-10-06 10:19] ==>  Preparing: SELECT DEPTNO, DEPTNAME, FLOOR FROM DEPARTMENT
+[DEBUG] [2020-10-06 10:19] ==> Parameters: 
+[TRACE] [2020-10-06 10:19] <==    Columns: DEPTNO, DEPTNAME, FLOOR
+[TRACE] [2020-10-06 10:19] <==        Row: 1, 영업, 8
+[TRACE] [2020-10-06 10:19] <==        Row: 2, 기획, 10
+[TRACE] [2020-10-06 10:19] <==        Row: 3, 개발, 9
+[TRACE] [2020-10-06 10:19] <==        Row: 4, 총무, 7
+[TRACE] [2020-10-06 10:19] <==        Row: 6, 태스크포스, 10
+[DEBUG] [2020-10-06 10:19] <==      Total: 5
+[DEBUG] [2020-10-06 10:19] test02InsertDepartment()
+[DEBUG] [2020-10-06 10:19] ==>  Preparing: INSERT INTO DEPARTMENT VALUES(?, ?, ?)
+[DEBUG] [2020-10-06 10:19] ==> Parameters: 5(Integer), 마케팅(String), 20(Integer)
+[DEBUG] [2020-10-06 10:19] <==    Updates: 1
+[DEBUG] [2020-10-06 10:19] test03UpdateDepartment()
+[DEBUG] [2020-10-06 10:19] ==>  Preparing: UPDATE DEPARTMENT SET DEPTNAME = ?, FLOOR = ? WHERE DEPTNO = ?
+[DEBUG] [2020-10-06 10:19] ==> Parameters: 마케팅2(String), 10(Integer), 5(Integer)
+[DEBUG] [2020-10-06 10:19] <==    Updates: 1
+[DEBUG] [2020-10-06 10:19] test04SelectDepartmentByNo()
+[DEBUG] [2020-10-06 10:19] ==>  Preparing: SELECT DEPTNO, DEPTNAME, FLOOR FROM DEPARTMENT WHERE DEPTNO = 1
+[DEBUG] [2020-10-06 10:19] ==> Parameters: 
+[TRACE] [2020-10-06 10:19] <==    Columns: DEPTNO, DEPTNAME, FLOOR
+[TRACE] [2020-10-06 10:19] <==        Row: 1, 영업, 8
+[DEBUG] [2020-10-06 10:19] <==      Total: 1
+[DEBUG] [2020-10-06 10:19] Department [deptNo=1, deptName=영업, floor=8]
+[DEBUG] [2020-10-06 10:19] test05DeleteDepartment()
+[DEBUG] [2020-10-06 10:19] ==>  Preparing: DELETE FROM DEPARTMENT WHERE DEPTNO = ?
+[DEBUG] [2020-10-06 10:19] ==> Parameters: 5(Integer)
+[DEBUG] [2020-10-06 10:19] <==    Updates: 1
+[DEBUG] [2020-10-06 10:19] test01SelectEmployeeByAll()
+[DEBUG] [2020-10-06 10:19] ==>  Preparing: SELECT EMPNO, EMPNAME, TITLE, MANAGER, SALARY, DNO FROM EMPLOYEE
+[DEBUG] [2020-10-06 10:19] ==> Parameters: 
+[TRACE] [2020-10-06 10:19] <==    Columns: EMPNO, EMPNAME, TITLE, MANAGER, SALARY, DNO
+[TRACE] [2020-10-06 10:19] <==        Row: 4377, 이성래, 1, null, 5000000, 2
+[TRACE] [2020-10-06 10:19] <==        Row: 3426, 박영권, 3, 4377, 3000000, 1
+[TRACE] [2020-10-06 10:19] <==        Row: 3011, 이수민, 2, 4377, 4000000, 3
+[TRACE] [2020-10-06 10:19] <==        Row: 3427, 최종철, 5, 3011, 1500000, 3
+[TRACE] [2020-10-06 10:19] <==        Row: 1003, 조민희, 3, 4377, 3000000, 2
+[TRACE] [2020-10-06 10:19] <==        Row: 2106, 김창섭, 4, 1003, 2500000, 2
+[TRACE] [2020-10-06 10:19] <==        Row: 1365, 김상원, 5, 3426, 1500000, 1
+[DEBUG] [2020-10-06 10:19] <==      Total: 7
+[DEBUG] [2020-10-06 10:19] test02InsertEmployee()
+[DEBUG] [2020-10-06 10:19] ==>  Preparing: INSERT INTO EMPLOYEE(EMPNO, EMPNAME, TITLE, MANAGER, SALARY, DNO) VALUES (?, ?, ?, ?, ?, ?)
+[DEBUG] [2020-10-06 10:19] ==> Parameters: 1004(Integer), 김자바(String), 1(String), 4377(Integer), 3000000(Integer), 1(Integer)
+[DEBUG] [2020-10-06 10:19] <==    Updates: 1
+[DEBUG] [2020-10-06 10:19] test03UpdateEmployee()
+[DEBUG] [2020-10-06 10:19] ==>  Preparing: UPDATE EMPLOYEE SET EMPNAME = ?, TITLE = ?, MANAGER = ?, SALARY = ?, DNO = ? WHERE EMPNO = ?
+[DEBUG] [2020-10-06 10:19] ==> Parameters: 김김김(String), 2(String), 1003(Integer), 2000000(Integer), 2(Integer), 1004(Integer)
+[DEBUG] [2020-10-06 10:19] <==    Updates: 1
+[DEBUG] [2020-10-06 10:19] test04SelectEmployeeByNo()
+[DEBUG] [2020-10-06 10:19] ==>  Preparing: SELECT EMPNO, EMPNAME, TITLE, MANAGER, SALARY, DNO FROM EMPLOYEE WHERE EMPNO = 4377
+[DEBUG] [2020-10-06 10:19] ==> Parameters: 
+[TRACE] [2020-10-06 10:19] <==    Columns: EMPNO, EMPNAME, TITLE, MANAGER, SALARY, DNO
+[TRACE] [2020-10-06 10:19] <==        Row: 4377, 이성래, 1, null, 5000000, 2
+[DEBUG] [2020-10-06 10:19] <==      Total: 1
+[DEBUG] [2020-10-06 10:19] Employee [empNo=4377, empName=이성래, title=1, manager=null, salary=5000000, dept=null]
+[DEBUG] [2020-10-06 10:19] test05DeleteEmployee()
+[DEBUG] [2020-10-06 10:19] ==>  Preparing: DELETE FROM EMPLOYEE WHERE EMPNO = ?
+[DEBUG] [2020-10-06 10:19] ==> Parameters: 1004(Integer)
+[DEBUG] [2020-10-06 10:19] <==    Updates: 1
+[DEBUG] [2020-10-06 10:19] testDataSource()
+[DEBUG] [2020-10-06 10:19] session org.apache.ibatis.session.defaults.DefaultSqlSession@9b554c0
+[DEBUG] [2020-10-06 10:22] testARegisterTransaction_Dept_Fail()
+[DEBUG] [2020-10-06 10:22] ==>  Preparing: INSERT INTO DEPARTMENT VALUES(?, ?, ?)
+[DEBUG] [2020-10-06 10:22] ==> Parameters: 1(Integer), 태스크포스(String), 10(Integer)
+[DEBUG] [2020-10-06 10:22] testBRegisterTransaction_Emp_Fail()
+[DEBUG] [2020-10-06 10:22] ==>  Preparing: INSERT INTO DEPARTMENT VALUES(?, ?, ?)
+[DEBUG] [2020-10-06 10:22] ==> Parameters: 6(Integer), 태스크포스(String), 10(Integer)
+[DEBUG] [2020-10-06 10:22] testCRegisterTransaction_Success()
+[DEBUG] [2020-10-06 10:22] ==>  Preparing: INSERT INTO DEPARTMENT VALUES(?, ?, ?)
+[DEBUG] [2020-10-06 10:22] ==> Parameters: 6(Integer), 태스크포스(String), 10(Integer)
+[DEBUG] [2020-10-06 10:22] testDUnRegisterTransaction_Dept_Fail()
+[DEBUG] [2020-10-06 10:22] ==>  Preparing: DELETE FROM EMPLOYEE WHERE EMPNO = ?
+[DEBUG] [2020-10-06 10:22] ==> Parameters: 1005(Integer)
+[DEBUG] [2020-10-06 10:22] <==    Updates: 0
+[DEBUG] [2020-10-06 10:22] ==>  Preparing: DELETE FROM DEPARTMENT WHERE DEPTNO = ?
+[DEBUG] [2020-10-06 10:22] ==> Parameters: 100(Integer)
+[DEBUG] [2020-10-06 10:22] <==    Updates: 0
+[DEBUG] [2020-10-06 10:22] testDataSource()
+[DEBUG] [2020-10-06 10:22] DataSource HikariDataSource (HikariPool-1)
+[DEBUG] [2020-10-06 10:22] LoginTimeout 30
+[DEBUG] [2020-10-06 10:22] test01SelectDepartmentByAll()
+[DEBUG] [2020-10-06 10:22] ==>  Preparing: SELECT DEPTNO, DEPTNAME, FLOOR FROM DEPARTMENT
+[DEBUG] [2020-10-06 10:22] ==> Parameters: 
+[TRACE] [2020-10-06 10:22] <==    Columns: DEPTNO, DEPTNAME, FLOOR
+[TRACE] [2020-10-06 10:22] <==        Row: 1, 영업, 8
+[TRACE] [2020-10-06 10:22] <==        Row: 2, 기획, 10
+[TRACE] [2020-10-06 10:22] <==        Row: 3, 개발, 9
+[TRACE] [2020-10-06 10:22] <==        Row: 4, 총무, 7
+[TRACE] [2020-10-06 10:22] <==        Row: 6, 태스크포스, 10
+[DEBUG] [2020-10-06 10:22] <==      Total: 5
+[DEBUG] [2020-10-06 10:22] test02InsertDepartment()
+[DEBUG] [2020-10-06 10:22] ==>  Preparing: INSERT INTO DEPARTMENT VALUES(?, ?, ?)
+[DEBUG] [2020-10-06 10:22] ==> Parameters: 5(Integer), 마케팅(String), 20(Integer)
+[DEBUG] [2020-10-06 10:22] <==    Updates: 1
+[DEBUG] [2020-10-06 10:22] test03UpdateDepartment()
+[DEBUG] [2020-10-06 10:22] ==>  Preparing: UPDATE DEPARTMENT SET DEPTNAME = ?, FLOOR = ? WHERE DEPTNO = ?
+[DEBUG] [2020-10-06 10:22] ==> Parameters: 마케팅2(String), 10(Integer), 5(Integer)
+[DEBUG] [2020-10-06 10:22] <==    Updates: 1
+[DEBUG] [2020-10-06 10:22] test04SelectDepartmentByNo()
+[DEBUG] [2020-10-06 10:22] ==>  Preparing: SELECT DEPTNO, DEPTNAME, FLOOR FROM DEPARTMENT WHERE DEPTNO = 1
+[DEBUG] [2020-10-06 10:22] ==> Parameters: 
+[TRACE] [2020-10-06 10:22] <==    Columns: DEPTNO, DEPTNAME, FLOOR
+[TRACE] [2020-10-06 10:22] <==        Row: 1, 영업, 8
+[DEBUG] [2020-10-06 10:22] <==      Total: 1
+[DEBUG] [2020-10-06 10:22] Department [deptNo=1, deptName=영업, floor=8]
+[DEBUG] [2020-10-06 10:22] test05DeleteDepartment()
+[DEBUG] [2020-10-06 10:22] ==>  Preparing: DELETE FROM DEPARTMENT WHERE DEPTNO = ?
+[DEBUG] [2020-10-06 10:22] ==> Parameters: 5(Integer)
+[DEBUG] [2020-10-06 10:22] <==    Updates: 1
+[DEBUG] [2020-10-06 10:22] test01SelectEmployeeByAll()
+[DEBUG] [2020-10-06 10:22] ==>  Preparing: SELECT EMPNO, EMPNAME, TITLE, MANAGER, SALARY, DNO FROM EMPLOYEE
+[DEBUG] [2020-10-06 10:22] ==> Parameters: 
+[TRACE] [2020-10-06 10:22] <==    Columns: EMPNO, EMPNAME, TITLE, MANAGER, SALARY, DNO
+[TRACE] [2020-10-06 10:22] <==        Row: 4377, 이성래, 1, null, 5000000, 2
+[TRACE] [2020-10-06 10:22] <==        Row: 3426, 박영권, 3, 4377, 3000000, 1
+[TRACE] [2020-10-06 10:22] <==        Row: 3011, 이수민, 2, 4377, 4000000, 3
+[TRACE] [2020-10-06 10:22] <==        Row: 3427, 최종철, 5, 3011, 1500000, 3
+[TRACE] [2020-10-06 10:22] <==        Row: 1003, 조민희, 3, 4377, 3000000, 2
+[TRACE] [2020-10-06 10:22] <==        Row: 2106, 김창섭, 4, 1003, 2500000, 2
+[TRACE] [2020-10-06 10:22] <==        Row: 1365, 김상원, 5, 3426, 1500000, 1
+[DEBUG] [2020-10-06 10:22] <==      Total: 7
+[DEBUG] [2020-10-06 10:22] test02InsertEmployee()
+[DEBUG] [2020-10-06 10:22] ==>  Preparing: INSERT INTO EMPLOYEE(EMPNO, EMPNAME, TITLE, MANAGER, SALARY, DNO) VALUES (?, ?, ?, ?, ?, ?)
+[DEBUG] [2020-10-06 10:22] ==> Parameters: 1004(Integer), 김자바(String), 1(String), 4377(Integer), 3000000(Integer), 1(Integer)
+[DEBUG] [2020-10-06 10:22] <==    Updates: 1
+[DEBUG] [2020-10-06 10:22] test03UpdateEmployee()
+[DEBUG] [2020-10-06 10:22] ==>  Preparing: UPDATE EMPLOYEE SET EMPNAME = ?, TITLE = ?, MANAGER = ?, SALARY = ?, DNO = ? WHERE EMPNO = ?
+[DEBUG] [2020-10-06 10:22] ==> Parameters: 김김김(String), 2(String), 1003(Integer), 2000000(Integer), 2(Integer), 1004(Integer)
+[DEBUG] [2020-10-06 10:22] <==    Updates: 1
+[DEBUG] [2020-10-06 10:22] test04SelectEmployeeByNo()
+[DEBUG] [2020-10-06 10:22] ==>  Preparing: SELECT EMPNO, EMPNAME, TITLE, MANAGER, SALARY, DNO FROM EMPLOYEE WHERE EMPNO = 4377
+[DEBUG] [2020-10-06 10:22] ==> Parameters: 
+[TRACE] [2020-10-06 10:22] <==    Columns: EMPNO, EMPNAME, TITLE, MANAGER, SALARY, DNO
+[TRACE] [2020-10-06 10:22] <==        Row: 4377, 이성래, 1, null, 5000000, 2
+[DEBUG] [2020-10-06 10:22] <==      Total: 1
+[DEBUG] [2020-10-06 10:22] Employee [empNo=4377, empName=이성래, title=1, manager=null, salary=5000000, dept=null]
+[DEBUG] [2020-10-06 10:22] test05DeleteEmployee()
+[DEBUG] [2020-10-06 10:22] ==>  Preparing: DELETE FROM EMPLOYEE WHERE EMPNO = ?
+[DEBUG] [2020-10-06 10:22] ==> Parameters: 1004(Integer)
+[DEBUG] [2020-10-06 10:22] <==    Updates: 1
+[DEBUG] [2020-10-06 10:22] testDataSource()
+[DEBUG] [2020-10-06 10:22] session org.apache.ibatis.session.defaults.DefaultSqlSession@38236af
+[DEBUG] [2020-10-06 10:22] testARegisterTransaction_Dept_Fail()
+[DEBUG] [2020-10-06 10:22] ==>  Preparing: INSERT INTO DEPARTMENT VALUES(?, ?, ?)
+[DEBUG] [2020-10-06 10:22] ==> Parameters: 1(Integer), 태스크포스(String), 10(Integer)
+[DEBUG] [2020-10-06 10:22] testBRegisterTransaction_Emp_Fail()
+[DEBUG] [2020-10-06 10:22] ==>  Preparing: INSERT INTO DEPARTMENT VALUES(?, ?, ?)
+[DEBUG] [2020-10-06 10:22] ==> Parameters: 6(Integer), 태스크포스(String), 10(Integer)
+[DEBUG] [2020-10-06 10:22] <==    Updates: 1
+[DEBUG] [2020-10-06 10:22] ==>  Preparing: INSERT INTO EMPLOYEE(EMPNO, EMPNAME, TITLE, MANAGER, SALARY, DNO) VALUES (?, ?, ?, ?, ?, ?)
+[DEBUG] [2020-10-06 10:22] ==> Parameters: 4377(Integer), 박신혜(String), 과장(String), 4377(Integer), 4100000(Integer), 6(Integer)
+[DEBUG] [2020-10-06 10:22] testCRegisterTransaction_Success()
+[DEBUG] [2020-10-06 10:22] ==>  Preparing: INSERT INTO DEPARTMENT VALUES(?, ?, ?)
+[DEBUG] [2020-10-06 10:22] ==> Parameters: 6(Integer), 태스크포스(String), 10(Integer)
+[DEBUG] [2020-10-06 10:22] <==    Updates: 1
+[DEBUG] [2020-10-06 10:22] ==>  Preparing: INSERT INTO EMPLOYEE(EMPNO, EMPNAME, TITLE, MANAGER, SALARY, DNO) VALUES (?, ?, ?, ?, ?, ?)
+[DEBUG] [2020-10-06 10:22] ==> Parameters: 1005(Integer), 박신혜(String), 과장(String), 4377(Integer), 4100000(Integer), 6(Integer)
+[DEBUG] [2020-10-06 10:22] <==    Updates: 1
+[DEBUG] [2020-10-06 10:22] testDUnRegisterTransaction_Dept_Fail()
+[DEBUG] [2020-10-06 10:22] ==>  Preparing: DELETE FROM EMPLOYEE WHERE EMPNO = ?
+[DEBUG] [2020-10-06 10:22] ==> Parameters: 1005(Integer)
+[DEBUG] [2020-10-06 10:22] <==    Updates: 1
+[DEBUG] [2020-10-06 10:22] ==>  Preparing: DELETE FROM DEPARTMENT WHERE DEPTNO = ?
+[DEBUG] [2020-10-06 10:22] ==> Parameters: 100(Integer)
+[DEBUG] [2020-10-06 10:22] <==    Updates: 0
+[DEBUG] [2020-10-06 10:22] testDataSource()
+[DEBUG] [2020-10-06 10:22] DataSource HikariDataSource (HikariPool-1)
+[DEBUG] [2020-10-06 10:22] LoginTimeout 30
+[DEBUG] [2020-10-06 10:22] test01SelectDepartmentByAll()
+[DEBUG] [2020-10-06 10:22] ==>  Preparing: SELECT DEPTNO, DEPTNAME, FLOOR FROM DEPARTMENT
+[DEBUG] [2020-10-06 10:22] ==> Parameters: 
+[TRACE] [2020-10-06 10:22] <==    Columns: DEPTNO, DEPTNAME, FLOOR
+[TRACE] [2020-10-06 10:22] <==        Row: 1, 영업, 8
+[TRACE] [2020-10-06 10:22] <==        Row: 2, 기획, 10
+[TRACE] [2020-10-06 10:22] <==        Row: 3, 개발, 9
+[TRACE] [2020-10-06 10:22] <==        Row: 4, 총무, 7
+[TRACE] [2020-10-06 10:22] <==        Row: 6, 태스크포스, 10
+[DEBUG] [2020-10-06 10:22] <==      Total: 5
+[DEBUG] [2020-10-06 10:22] test02InsertDepartment()
+[DEBUG] [2020-10-06 10:22] ==>  Preparing: INSERT INTO DEPARTMENT VALUES(?, ?, ?)
+[DEBUG] [2020-10-06 10:22] ==> Parameters: 5(Integer), 마케팅(String), 20(Integer)
+[DEBUG] [2020-10-06 10:22] <==    Updates: 1
+[DEBUG] [2020-10-06 10:22] test03UpdateDepartment()
+[DEBUG] [2020-10-06 10:22] ==>  Preparing: UPDATE DEPARTMENT SET DEPTNAME = ?, FLOOR = ? WHERE DEPTNO = ?
+[DEBUG] [2020-10-06 10:22] ==> Parameters: 마케팅2(String), 10(Integer), 5(Integer)
+[DEBUG] [2020-10-06 10:22] <==    Updates: 1
+[DEBUG] [2020-10-06 10:22] test04SelectDepartmentByNo()
+[DEBUG] [2020-10-06 10:22] ==>  Preparing: SELECT DEPTNO, DEPTNAME, FLOOR FROM DEPARTMENT WHERE DEPTNO = 1
+[DEBUG] [2020-10-06 10:22] ==> Parameters: 
+[TRACE] [2020-10-06 10:22] <==    Columns: DEPTNO, DEPTNAME, FLOOR
+[TRACE] [2020-10-06 10:22] <==        Row: 1, 영업, 8
+[DEBUG] [2020-10-06 10:22] <==      Total: 1
+[DEBUG] [2020-10-06 10:22] Department [deptNo=1, deptName=영업, floor=8]
+[DEBUG] [2020-10-06 10:22] test05DeleteDepartment()
+[DEBUG] [2020-10-06 10:22] ==>  Preparing: DELETE FROM DEPARTMENT WHERE DEPTNO = ?
+[DEBUG] [2020-10-06 10:22] ==> Parameters: 5(Integer)
+[DEBUG] [2020-10-06 10:22] <==    Updates: 1
+[DEBUG] [2020-10-06 10:22] test01SelectEmployeeByAll()
+[DEBUG] [2020-10-06 10:22] ==>  Preparing: SELECT EMPNO, EMPNAME, TITLE, MANAGER, SALARY, DNO FROM EMPLOYEE
+[DEBUG] [2020-10-06 10:22] ==> Parameters: 
+[TRACE] [2020-10-06 10:22] <==    Columns: EMPNO, EMPNAME, TITLE, MANAGER, SALARY, DNO
+[TRACE] [2020-10-06 10:22] <==        Row: 4377, 이성래, 1, null, 5000000, 2
+[TRACE] [2020-10-06 10:22] <==        Row: 3426, 박영권, 3, 4377, 3000000, 1
+[TRACE] [2020-10-06 10:22] <==        Row: 3011, 이수민, 2, 4377, 4000000, 3
+[TRACE] [2020-10-06 10:22] <==        Row: 3427, 최종철, 5, 3011, 1500000, 3
+[TRACE] [2020-10-06 10:22] <==        Row: 1003, 조민희, 3, 4377, 3000000, 2
+[TRACE] [2020-10-06 10:22] <==        Row: 2106, 김창섭, 4, 1003, 2500000, 2
+[TRACE] [2020-10-06 10:22] <==        Row: 1365, 김상원, 5, 3426, 1500000, 1
+[DEBUG] [2020-10-06 10:22] <==      Total: 7
+[DEBUG] [2020-10-06 10:22] test02InsertEmployee()
+[DEBUG] [2020-10-06 10:22] ==>  Preparing: INSERT INTO EMPLOYEE(EMPNO, EMPNAME, TITLE, MANAGER, SALARY, DNO) VALUES (?, ?, ?, ?, ?, ?)
+[DEBUG] [2020-10-06 10:22] ==> Parameters: 1004(Integer), 김자바(String), 1(String), 4377(Integer), 3000000(Integer), 1(Integer)
+[DEBUG] [2020-10-06 10:22] <==    Updates: 1
+[DEBUG] [2020-10-06 10:22] test03UpdateEmployee()
+[DEBUG] [2020-10-06 10:22] ==>  Preparing: UPDATE EMPLOYEE SET EMPNAME = ?, TITLE = ?, MANAGER = ?, SALARY = ?, DNO = ? WHERE EMPNO = ?
+[DEBUG] [2020-10-06 10:22] ==> Parameters: 김김김(String), 2(String), 1003(Integer), 2000000(Integer), 2(Integer), 1004(Integer)
+[DEBUG] [2020-10-06 10:22] <==    Updates: 1
+[DEBUG] [2020-10-06 10:22] test04SelectEmployeeByNo()
+[DEBUG] [2020-10-06 10:22] ==>  Preparing: SELECT EMPNO, EMPNAME, TITLE, MANAGER, SALARY, DNO FROM EMPLOYEE WHERE EMPNO = 4377
+[DEBUG] [2020-10-06 10:22] ==> Parameters: 
+[TRACE] [2020-10-06 10:22] <==    Columns: EMPNO, EMPNAME, TITLE, MANAGER, SALARY, DNO
+[TRACE] [2020-10-06 10:22] <==        Row: 4377, 이성래, 1, null, 5000000, 2
+[DEBUG] [2020-10-06 10:22] <==      Total: 1
+[DEBUG] [2020-10-06 10:22] Employee [empNo=4377, empName=이성래, title=1, manager=null, salary=5000000, dept=null]
+[DEBUG] [2020-10-06 10:22] test05DeleteEmployee()
+[DEBUG] [2020-10-06 10:22] ==>  Preparing: DELETE FROM EMPLOYEE WHERE EMPNO = ?
+[DEBUG] [2020-10-06 10:22] ==> Parameters: 1004(Integer)
+[DEBUG] [2020-10-06 10:22] <==    Updates: 1
+[DEBUG] [2020-10-06 10:22] testDataSource()
+[DEBUG] [2020-10-06 10:22] session org.apache.ibatis.session.defaults.DefaultSqlSession@5cad5991
+[DEBUG] [2020-10-06 10:25] testARegisterTransaction_Dept_Fail()
+[DEBUG] [2020-10-06 10:25] ==>  Preparing: INSERT INTO DEPARTMENT VALUES(?, ?, ?)
+[DEBUG] [2020-10-06 10:25] ==> Parameters: 1(Integer), 태스크포스(String), 10(Integer)
+[DEBUG] [2020-10-06 10:25] testBRegisterTransaction_Emp_Fail()
+[DEBUG] [2020-10-06 10:25] ==>  Preparing: INSERT INTO DEPARTMENT VALUES(?, ?, ?)
+[DEBUG] [2020-10-06 10:25] ==> Parameters: 6(Integer), 태스크포스(String), 10(Integer)
+[DEBUG] [2020-10-06 10:25] testCRegisterTransaction_Success()
+[DEBUG] [2020-10-06 10:25] ==>  Preparing: INSERT INTO DEPARTMENT VALUES(?, ?, ?)
+[DEBUG] [2020-10-06 10:25] ==> Parameters: 6(Integer), 태스크포스(String), 10(Integer)
+[DEBUG] [2020-10-06 10:25] testDUnRegisterTransaction_Dept_Fail()
+[DEBUG] [2020-10-06 10:25] ==>  Preparing: DELETE FROM EMPLOYEE WHERE EMPNO = ?
+[DEBUG] [2020-10-06 10:25] ==> Parameters: 1005(Integer)
+[DEBUG] [2020-10-06 10:25] <==    Updates: 0
+[DEBUG] [2020-10-06 10:25] ==>  Preparing: DELETE FROM DEPARTMENT WHERE DEPTNO = ?
+[DEBUG] [2020-10-06 10:25] ==> Parameters: 100(Integer)
+[DEBUG] [2020-10-06 10:25] <==    Updates: 0
+[DEBUG] [2020-10-06 10:25] testEUnRegisterTransaction_Emp_Fail()
+[DEBUG] [2020-10-06 10:25] ==>  Preparing: DELETE FROM EMPLOYEE WHERE EMPNO = ?
+[DEBUG] [2020-10-06 10:25] ==> Parameters: 9999(Integer)
+[DEBUG] [2020-10-06 10:25] <==    Updates: 0
+[DEBUG] [2020-10-06 10:25] ==>  Preparing: DELETE FROM DEPARTMENT WHERE DEPTNO = ?
+[DEBUG] [2020-10-06 10:25] ==> Parameters: 6(Integer)
+[DEBUG] [2020-10-06 10:25] <==    Updates: 1
+[DEBUG] [2020-10-06 10:25] testDataSource()
+[DEBUG] [2020-10-06 10:25] DataSource HikariDataSource (HikariPool-1)
+[DEBUG] [2020-10-06 10:25] LoginTimeout 30
+[DEBUG] [2020-10-06 10:25] test01SelectDepartmentByAll()
+[DEBUG] [2020-10-06 10:25] ==>  Preparing: SELECT DEPTNO, DEPTNAME, FLOOR FROM DEPARTMENT
+[DEBUG] [2020-10-06 10:25] ==> Parameters: 
+[TRACE] [2020-10-06 10:25] <==    Columns: DEPTNO, DEPTNAME, FLOOR
+[TRACE] [2020-10-06 10:25] <==        Row: 1, 영업, 8
+[TRACE] [2020-10-06 10:25] <==        Row: 2, 기획, 10
+[TRACE] [2020-10-06 10:25] <==        Row: 3, 개발, 9
+[TRACE] [2020-10-06 10:25] <==        Row: 4, 총무, 7
+[TRACE] [2020-10-06 10:25] <==        Row: 6, 태스크포스, 10
+[DEBUG] [2020-10-06 10:25] <==      Total: 5
+[DEBUG] [2020-10-06 10:25] test02InsertDepartment()
+[DEBUG] [2020-10-06 10:25] ==>  Preparing: INSERT INTO DEPARTMENT VALUES(?, ?, ?)
+[DEBUG] [2020-10-06 10:25] ==> Parameters: 5(Integer), 마케팅(String), 20(Integer)
+[DEBUG] [2020-10-06 10:25] <==    Updates: 1
+[DEBUG] [2020-10-06 10:25] test03UpdateDepartment()
+[DEBUG] [2020-10-06 10:25] ==>  Preparing: UPDATE DEPARTMENT SET DEPTNAME = ?, FLOOR = ? WHERE DEPTNO = ?
+[DEBUG] [2020-10-06 10:25] ==> Parameters: 마케팅2(String), 10(Integer), 5(Integer)
+[DEBUG] [2020-10-06 10:25] <==    Updates: 1
+[DEBUG] [2020-10-06 10:25] test04SelectDepartmentByNo()
+[DEBUG] [2020-10-06 10:25] ==>  Preparing: SELECT DEPTNO, DEPTNAME, FLOOR FROM DEPARTMENT WHERE DEPTNO = 1
+[DEBUG] [2020-10-06 10:25] ==> Parameters: 
+[TRACE] [2020-10-06 10:25] <==    Columns: DEPTNO, DEPTNAME, FLOOR
+[TRACE] [2020-10-06 10:25] <==        Row: 1, 영업, 8
+[DEBUG] [2020-10-06 10:25] <==      Total: 1
+[DEBUG] [2020-10-06 10:25] Department [deptNo=1, deptName=영업, floor=8]
+[DEBUG] [2020-10-06 10:25] test05DeleteDepartment()
+[DEBUG] [2020-10-06 10:25] ==>  Preparing: DELETE FROM DEPARTMENT WHERE DEPTNO = ?
+[DEBUG] [2020-10-06 10:25] ==> Parameters: 5(Integer)
+[DEBUG] [2020-10-06 10:25] <==    Updates: 1
+[DEBUG] [2020-10-06 10:25] test01SelectEmployeeByAll()
+[DEBUG] [2020-10-06 10:25] ==>  Preparing: SELECT EMPNO, EMPNAME, TITLE, MANAGER, SALARY, DNO FROM EMPLOYEE
+[DEBUG] [2020-10-06 10:25] ==> Parameters: 
+[TRACE] [2020-10-06 10:25] <==    Columns: EMPNO, EMPNAME, TITLE, MANAGER, SALARY, DNO
+[TRACE] [2020-10-06 10:25] <==        Row: 4377, 이성래, 1, null, 5000000, 2
+[TRACE] [2020-10-06 10:25] <==        Row: 3426, 박영권, 3, 4377, 3000000, 1
+[TRACE] [2020-10-06 10:25] <==        Row: 3011, 이수민, 2, 4377, 4000000, 3
+[TRACE] [2020-10-06 10:25] <==        Row: 3427, 최종철, 5, 3011, 1500000, 3
+[TRACE] [2020-10-06 10:25] <==        Row: 1003, 조민희, 3, 4377, 3000000, 2
+[TRACE] [2020-10-06 10:25] <==        Row: 2106, 김창섭, 4, 1003, 2500000, 2
+[TRACE] [2020-10-06 10:25] <==        Row: 1365, 김상원, 5, 3426, 1500000, 1
+[DEBUG] [2020-10-06 10:25] <==      Total: 7
+[DEBUG] [2020-10-06 10:25] test02InsertEmployee()
+[DEBUG] [2020-10-06 10:25] ==>  Preparing: INSERT INTO EMPLOYEE(EMPNO, EMPNAME, TITLE, MANAGER, SALARY, DNO) VALUES (?, ?, ?, ?, ?, ?)
+[DEBUG] [2020-10-06 10:25] ==> Parameters: 1004(Integer), 김자바(String), 1(String), 4377(Integer), 3000000(Integer), 1(Integer)
+[DEBUG] [2020-10-06 10:25] <==    Updates: 1
+[DEBUG] [2020-10-06 10:25] test03UpdateEmployee()
+[DEBUG] [2020-10-06 10:25] ==>  Preparing: UPDATE EMPLOYEE SET EMPNAME = ?, TITLE = ?, MANAGER = ?, SALARY = ?, DNO = ? WHERE EMPNO = ?
+[DEBUG] [2020-10-06 10:25] ==> Parameters: 김김김(String), 2(String), 1003(Integer), 2000000(Integer), 2(Integer), 1004(Integer)
+[DEBUG] [2020-10-06 10:25] <==    Updates: 1
+[DEBUG] [2020-10-06 10:25] test04SelectEmployeeByNo()
+[DEBUG] [2020-10-06 10:25] ==>  Preparing: SELECT EMPNO, EMPNAME, TITLE, MANAGER, SALARY, DNO FROM EMPLOYEE WHERE EMPNO = 4377
+[DEBUG] [2020-10-06 10:25] ==> Parameters: 
+[TRACE] [2020-10-06 10:25] <==    Columns: EMPNO, EMPNAME, TITLE, MANAGER, SALARY, DNO
+[TRACE] [2020-10-06 10:25] <==        Row: 4377, 이성래, 1, null, 5000000, 2
+[DEBUG] [2020-10-06 10:25] <==      Total: 1
+[DEBUG] [2020-10-06 10:25] Employee [empNo=4377, empName=이성래, title=1, manager=null, salary=5000000, dept=null]
+[DEBUG] [2020-10-06 10:25] test05DeleteEmployee()
+[DEBUG] [2020-10-06 10:25] ==>  Preparing: DELETE FROM EMPLOYEE WHERE EMPNO = ?
+[DEBUG] [2020-10-06 10:25] ==> Parameters: 1004(Integer)
+[DEBUG] [2020-10-06 10:25] <==    Updates: 1
+[DEBUG] [2020-10-06 10:25] testDataSource()
+[DEBUG] [2020-10-06 10:25] session org.apache.ibatis.session.defaults.DefaultSqlSession@577d4df7
+[DEBUG] [2020-10-06 10:26] testARegisterTransaction_Dept_Fail()
+[DEBUG] [2020-10-06 10:26] ==>  Preparing: INSERT INTO DEPARTMENT VALUES(?, ?, ?)
+[DEBUG] [2020-10-06 10:26] ==> Parameters: 1(Integer), 태스크포스(String), 10(Integer)
+[DEBUG] [2020-10-06 10:26] testBRegisterTransaction_Emp_Fail()
+[DEBUG] [2020-10-06 10:26] ==>  Preparing: INSERT INTO DEPARTMENT VALUES(?, ?, ?)
+[DEBUG] [2020-10-06 10:26] ==> Parameters: 6(Integer), 태스크포스(String), 10(Integer)
+[DEBUG] [2020-10-06 10:26] <==    Updates: 1
+[DEBUG] [2020-10-06 10:26] ==>  Preparing: INSERT INTO EMPLOYEE(EMPNO, EMPNAME, TITLE, MANAGER, SALARY, DNO) VALUES (?, ?, ?, ?, ?, ?)
+[DEBUG] [2020-10-06 10:26] ==> Parameters: 4377(Integer), 박신혜(String), 과장(String), 4377(Integer), 4100000(Integer), 6(Integer)
+[DEBUG] [2020-10-06 10:26] testCRegisterTransaction_Success()
+[DEBUG] [2020-10-06 10:26] ==>  Preparing: INSERT INTO DEPARTMENT VALUES(?, ?, ?)
+[DEBUG] [2020-10-06 10:26] ==> Parameters: 6(Integer), 태스크포스(String), 10(Integer)
+[DEBUG] [2020-10-06 10:26] <==    Updates: 1
+[DEBUG] [2020-10-06 10:26] ==>  Preparing: INSERT INTO EMPLOYEE(EMPNO, EMPNAME, TITLE, MANAGER, SALARY, DNO) VALUES (?, ?, ?, ?, ?, ?)
+[DEBUG] [2020-10-06 10:26] ==> Parameters: 1005(Integer), 박신혜(String), 과장(String), 4377(Integer), 4100000(Integer), 6(Integer)
+[DEBUG] [2020-10-06 10:26] <==    Updates: 1
+[DEBUG] [2020-10-06 10:26] testDUnRegisterTransaction_Dept_Fail()
+[DEBUG] [2020-10-06 10:26] ==>  Preparing: DELETE FROM EMPLOYEE WHERE EMPNO = ?
+[DEBUG] [2020-10-06 10:26] ==> Parameters: 1005(Integer)
+[DEBUG] [2020-10-06 10:26] <==    Updates: 1
+[DEBUG] [2020-10-06 10:26] ==>  Preparing: DELETE FROM DEPARTMENT WHERE DEPTNO = ?
+[DEBUG] [2020-10-06 10:26] ==> Parameters: 100(Integer)
+[DEBUG] [2020-10-06 10:26] <==    Updates: 0
+[DEBUG] [2020-10-06 10:26] testEUnRegisterTransaction_Emp_Fail()
+[DEBUG] [2020-10-06 10:26] ==>  Preparing: DELETE FROM EMPLOYEE WHERE EMPNO = ?
+[DEBUG] [2020-10-06 10:26] ==> Parameters: 9999(Integer)
+[DEBUG] [2020-10-06 10:26] <==    Updates: 0
+[DEBUG] [2020-10-06 10:26] ==>  Preparing: DELETE FROM DEPARTMENT WHERE DEPTNO = ?
+[DEBUG] [2020-10-06 10:26] ==> Parameters: 6(Integer)
+[DEBUG] [2020-10-06 10:26] testDataSource()
+[DEBUG] [2020-10-06 10:26] DataSource HikariDataSource (HikariPool-1)
+[DEBUG] [2020-10-06 10:26] LoginTimeout 30
+[DEBUG] [2020-10-06 10:26] test01SelectDepartmentByAll()
+[DEBUG] [2020-10-06 10:26] ==>  Preparing: SELECT DEPTNO, DEPTNAME, FLOOR FROM DEPARTMENT
+[DEBUG] [2020-10-06 10:26] ==> Parameters: 
+[TRACE] [2020-10-06 10:26] <==    Columns: DEPTNO, DEPTNAME, FLOOR
+[TRACE] [2020-10-06 10:26] <==        Row: 1, 영업, 8
+[TRACE] [2020-10-06 10:26] <==        Row: 2, 기획, 10
+[TRACE] [2020-10-06 10:26] <==        Row: 3, 개발, 9
+[TRACE] [2020-10-06 10:26] <==        Row: 4, 총무, 7
+[TRACE] [2020-10-06 10:26] <==        Row: 6, 태스크포스, 10
+[DEBUG] [2020-10-06 10:26] <==      Total: 5
+[DEBUG] [2020-10-06 10:26] test02InsertDepartment()
+[DEBUG] [2020-10-06 10:26] ==>  Preparing: INSERT INTO DEPARTMENT VALUES(?, ?, ?)
+[DEBUG] [2020-10-06 10:26] ==> Parameters: 5(Integer), 마케팅(String), 20(Integer)
+[DEBUG] [2020-10-06 10:26] <==    Updates: 1
+[DEBUG] [2020-10-06 10:26] test03UpdateDepartment()
+[DEBUG] [2020-10-06 10:26] ==>  Preparing: UPDATE DEPARTMENT SET DEPTNAME = ?, FLOOR = ? WHERE DEPTNO = ?
+[DEBUG] [2020-10-06 10:26] ==> Parameters: 마케팅2(String), 10(Integer), 5(Integer)
+[DEBUG] [2020-10-06 10:26] <==    Updates: 1
+[DEBUG] [2020-10-06 10:26] test04SelectDepartmentByNo()
+[DEBUG] [2020-10-06 10:26] ==>  Preparing: SELECT DEPTNO, DEPTNAME, FLOOR FROM DEPARTMENT WHERE DEPTNO = 1
+[DEBUG] [2020-10-06 10:26] ==> Parameters: 
+[TRACE] [2020-10-06 10:26] <==    Columns: DEPTNO, DEPTNAME, FLOOR
+[TRACE] [2020-10-06 10:26] <==        Row: 1, 영업, 8
+[DEBUG] [2020-10-06 10:26] <==      Total: 1
+[DEBUG] [2020-10-06 10:26] Department [deptNo=1, deptName=영업, floor=8]
+[DEBUG] [2020-10-06 10:26] test05DeleteDepartment()
+[DEBUG] [2020-10-06 10:26] ==>  Preparing: DELETE FROM DEPARTMENT WHERE DEPTNO = ?
+[DEBUG] [2020-10-06 10:26] ==> Parameters: 5(Integer)
+[DEBUG] [2020-10-06 10:26] <==    Updates: 1
+[DEBUG] [2020-10-06 10:26] test01SelectEmployeeByAll()
+[DEBUG] [2020-10-06 10:26] ==>  Preparing: SELECT EMPNO, EMPNAME, TITLE, MANAGER, SALARY, DNO FROM EMPLOYEE
+[DEBUG] [2020-10-06 10:26] ==> Parameters: 
+[TRACE] [2020-10-06 10:26] <==    Columns: EMPNO, EMPNAME, TITLE, MANAGER, SALARY, DNO
+[TRACE] [2020-10-06 10:26] <==        Row: 4377, 이성래, 1, null, 5000000, 2
+[TRACE] [2020-10-06 10:26] <==        Row: 3426, 박영권, 3, 4377, 3000000, 1
+[TRACE] [2020-10-06 10:26] <==        Row: 3011, 이수민, 2, 4377, 4000000, 3
+[TRACE] [2020-10-06 10:26] <==        Row: 3427, 최종철, 5, 3011, 1500000, 3
+[TRACE] [2020-10-06 10:26] <==        Row: 1003, 조민희, 3, 4377, 3000000, 2
+[TRACE] [2020-10-06 10:26] <==        Row: 2106, 김창섭, 4, 1003, 2500000, 2
+[TRACE] [2020-10-06 10:26] <==        Row: 1365, 김상원, 5, 3426, 1500000, 1
+[TRACE] [2020-10-06 10:26] <==        Row: 1005, 박신혜, 과장, 4377, 4100000, 6
+[DEBUG] [2020-10-06 10:26] <==      Total: 8
+[DEBUG] [2020-10-06 10:26] test02InsertEmployee()
+[DEBUG] [2020-10-06 10:26] ==>  Preparing: INSERT INTO EMPLOYEE(EMPNO, EMPNAME, TITLE, MANAGER, SALARY, DNO) VALUES (?, ?, ?, ?, ?, ?)
+[DEBUG] [2020-10-06 10:26] ==> Parameters: 1004(Integer), 김자바(String), 1(String), 4377(Integer), 3000000(Integer), 1(Integer)
+[DEBUG] [2020-10-06 10:26] <==    Updates: 1
+[DEBUG] [2020-10-06 10:26] test03UpdateEmployee()
+[DEBUG] [2020-10-06 10:26] ==>  Preparing: UPDATE EMPLOYEE SET EMPNAME = ?, TITLE = ?, MANAGER = ?, SALARY = ?, DNO = ? WHERE EMPNO = ?
+[DEBUG] [2020-10-06 10:26] ==> Parameters: 김김김(String), 2(String), 1003(Integer), 2000000(Integer), 2(Integer), 1004(Integer)
+[DEBUG] [2020-10-06 10:26] <==    Updates: 1
+[DEBUG] [2020-10-06 10:26] test04SelectEmployeeByNo()
+[DEBUG] [2020-10-06 10:26] ==>  Preparing: SELECT EMPNO, EMPNAME, TITLE, MANAGER, SALARY, DNO FROM EMPLOYEE WHERE EMPNO = 4377
+[DEBUG] [2020-10-06 10:26] ==> Parameters: 
+[TRACE] [2020-10-06 10:26] <==    Columns: EMPNO, EMPNAME, TITLE, MANAGER, SALARY, DNO
+[TRACE] [2020-10-06 10:26] <==        Row: 4377, 이성래, 1, null, 5000000, 2
+[DEBUG] [2020-10-06 10:26] <==      Total: 1
+[DEBUG] [2020-10-06 10:26] Employee [empNo=4377, empName=이성래, title=1, manager=null, salary=5000000, dept=null]
+[DEBUG] [2020-10-06 10:26] test05DeleteEmployee()
+[DEBUG] [2020-10-06 10:26] ==>  Preparing: DELETE FROM EMPLOYEE WHERE EMPNO = ?
+[DEBUG] [2020-10-06 10:26] ==> Parameters: 1004(Integer)
+[DEBUG] [2020-10-06 10:26] <==    Updates: 1
+[DEBUG] [2020-10-06 10:26] testDataSource()
+[DEBUG] [2020-10-06 10:26] session org.apache.ibatis.session.defaults.DefaultSqlSession@577d4df7
+[DEBUG] [2020-10-06 10:26] testARegisterTransaction_Dept_Fail()
+[DEBUG] [2020-10-06 10:26] ==>  Preparing: INSERT INTO DEPARTMENT VALUES(?, ?, ?)
+[DEBUG] [2020-10-06 10:26] ==> Parameters: 1(Integer), 태스크포스(String), 10(Integer)
+[DEBUG] [2020-10-06 10:26] testBRegisterTransaction_Emp_Fail()
+[DEBUG] [2020-10-06 10:26] ==>  Preparing: INSERT INTO DEPARTMENT VALUES(?, ?, ?)
+[DEBUG] [2020-10-06 10:26] ==> Parameters: 6(Integer), 태스크포스(String), 10(Integer)
+[DEBUG] [2020-10-06 10:26] testCRegisterTransaction_Success()
+[DEBUG] [2020-10-06 10:26] ==>  Preparing: INSERT INTO DEPARTMENT VALUES(?, ?, ?)
+[DEBUG] [2020-10-06 10:26] ==> Parameters: 6(Integer), 태스크포스(String), 10(Integer)
+[DEBUG] [2020-10-06 10:26] testDUnRegisterTransaction_Dept_Fail()
+[DEBUG] [2020-10-06 10:26] ==>  Preparing: DELETE FROM EMPLOYEE WHERE EMPNO = ?
+[DEBUG] [2020-10-06 10:26] ==> Parameters: 1005(Integer)
+[DEBUG] [2020-10-06 10:26] <==    Updates: 1
+[DEBUG] [2020-10-06 10:26] ==>  Preparing: DELETE FROM DEPARTMENT WHERE DEPTNO = ?
+[DEBUG] [2020-10-06 10:26] ==> Parameters: 100(Integer)
+[DEBUG] [2020-10-06 10:26] <==    Updates: 0
+[DEBUG] [2020-10-06 10:26] testEUnRegisterTransaction_Emp_Fail()
+[DEBUG] [2020-10-06 10:26] ==>  Preparing: DELETE FROM EMPLOYEE WHERE EMPNO = ?
+[DEBUG] [2020-10-06 10:26] ==> Parameters: 9999(Integer)
+[DEBUG] [2020-10-06 10:26] <==    Updates: 0
+[DEBUG] [2020-10-06 10:26] ==>  Preparing: DELETE FROM DEPARTMENT WHERE DEPTNO = ?
+[DEBUG] [2020-10-06 10:26] ==> Parameters: 6(Integer)
+[DEBUG] [2020-10-06 10:26] testFUnRegisterTransaction_Success()
+[DEBUG] [2020-10-06 10:26] ==>  Preparing: DELETE FROM EMPLOYEE WHERE EMPNO = ?
+[DEBUG] [2020-10-06 10:26] ==> Parameters: 1005(Integer)
+[DEBUG] [2020-10-06 10:26] <==    Updates: 1
+[DEBUG] [2020-10-06 10:26] ==>  Preparing: DELETE FROM DEPARTMENT WHERE DEPTNO = ?
+[DEBUG] [2020-10-06 10:26] ==> Parameters: 6(Integer)
+[DEBUG] [2020-10-06 10:26] <==    Updates: 1
+[DEBUG] [2020-10-06 10:26] testDataSource()
+[DEBUG] [2020-10-06 10:26] DataSource HikariDataSource (HikariPool-1)
+[DEBUG] [2020-10-06 10:26] LoginTimeout 30
+[DEBUG] [2020-10-06 10:26] test01SelectDepartmentByAll()
+[DEBUG] [2020-10-06 10:26] ==>  Preparing: SELECT DEPTNO, DEPTNAME, FLOOR FROM DEPARTMENT
+[DEBUG] [2020-10-06 10:26] ==> Parameters: 
+[TRACE] [2020-10-06 10:26] <==    Columns: DEPTNO, DEPTNAME, FLOOR
+[TRACE] [2020-10-06 10:26] <==        Row: 1, 영업, 8
+[TRACE] [2020-10-06 10:26] <==        Row: 2, 기획, 10
+[TRACE] [2020-10-06 10:26] <==        Row: 3, 개발, 9
+[TRACE] [2020-10-06 10:26] <==        Row: 4, 총무, 7
+[DEBUG] [2020-10-06 10:26] <==      Total: 4
+[DEBUG] [2020-10-06 10:26] test02InsertDepartment()
+[DEBUG] [2020-10-06 10:26] ==>  Preparing: INSERT INTO DEPARTMENT VALUES(?, ?, ?)
+[DEBUG] [2020-10-06 10:26] ==> Parameters: 5(Integer), 마케팅(String), 20(Integer)
+[DEBUG] [2020-10-06 10:26] <==    Updates: 1
+[DEBUG] [2020-10-06 10:26] test03UpdateDepartment()
+[DEBUG] [2020-10-06 10:26] ==>  Preparing: UPDATE DEPARTMENT SET DEPTNAME = ?, FLOOR = ? WHERE DEPTNO = ?
+[DEBUG] [2020-10-06 10:26] ==> Parameters: 마케팅2(String), 10(Integer), 5(Integer)
+[DEBUG] [2020-10-06 10:26] <==    Updates: 1
+[DEBUG] [2020-10-06 10:26] test04SelectDepartmentByNo()
+[DEBUG] [2020-10-06 10:26] ==>  Preparing: SELECT DEPTNO, DEPTNAME, FLOOR FROM DEPARTMENT WHERE DEPTNO = 1
+[DEBUG] [2020-10-06 10:26] ==> Parameters: 
+[TRACE] [2020-10-06 10:26] <==    Columns: DEPTNO, DEPTNAME, FLOOR
+[TRACE] [2020-10-06 10:26] <==        Row: 1, 영업, 8
+[DEBUG] [2020-10-06 10:26] <==      Total: 1
+[DEBUG] [2020-10-06 10:26] Department [deptNo=1, deptName=영업, floor=8]
+[DEBUG] [2020-10-06 10:26] test05DeleteDepartment()
+[DEBUG] [2020-10-06 10:26] ==>  Preparing: DELETE FROM DEPARTMENT WHERE DEPTNO = ?
+[DEBUG] [2020-10-06 10:26] ==> Parameters: 5(Integer)
+[DEBUG] [2020-10-06 10:26] <==    Updates: 1
+[DEBUG] [2020-10-06 10:26] test01SelectEmployeeByAll()
+[DEBUG] [2020-10-06 10:26] ==>  Preparing: SELECT EMPNO, EMPNAME, TITLE, MANAGER, SALARY, DNO FROM EMPLOYEE
+[DEBUG] [2020-10-06 10:26] ==> Parameters: 
+[TRACE] [2020-10-06 10:26] <==    Columns: EMPNO, EMPNAME, TITLE, MANAGER, SALARY, DNO
+[TRACE] [2020-10-06 10:26] <==        Row: 4377, 이성래, 1, null, 5000000, 2
+[TRACE] [2020-10-06 10:26] <==        Row: 3426, 박영권, 3, 4377, 3000000, 1
+[TRACE] [2020-10-06 10:26] <==        Row: 3011, 이수민, 2, 4377, 4000000, 3
+[TRACE] [2020-10-06 10:26] <==        Row: 3427, 최종철, 5, 3011, 1500000, 3
+[TRACE] [2020-10-06 10:26] <==        Row: 1003, 조민희, 3, 4377, 3000000, 2
+[TRACE] [2020-10-06 10:26] <==        Row: 2106, 김창섭, 4, 1003, 2500000, 2
+[TRACE] [2020-10-06 10:26] <==        Row: 1365, 김상원, 5, 3426, 1500000, 1
+[DEBUG] [2020-10-06 10:26] <==      Total: 7
+[DEBUG] [2020-10-06 10:26] test02InsertEmployee()
+[DEBUG] [2020-10-06 10:26] ==>  Preparing: INSERT INTO EMPLOYEE(EMPNO, EMPNAME, TITLE, MANAGER, SALARY, DNO) VALUES (?, ?, ?, ?, ?, ?)
+[DEBUG] [2020-10-06 10:26] ==> Parameters: 1004(Integer), 김자바(String), 1(String), 4377(Integer), 3000000(Integer), 1(Integer)
+[DEBUG] [2020-10-06 10:26] <==    Updates: 1
+[DEBUG] [2020-10-06 10:26] test03UpdateEmployee()
+[DEBUG] [2020-10-06 10:26] ==>  Preparing: UPDATE EMPLOYEE SET EMPNAME = ?, TITLE = ?, MANAGER = ?, SALARY = ?, DNO = ? WHERE EMPNO = ?
+[DEBUG] [2020-10-06 10:26] ==> Parameters: 김김김(String), 2(String), 1003(Integer), 2000000(Integer), 2(Integer), 1004(Integer)
+[DEBUG] [2020-10-06 10:26] <==    Updates: 1
+[DEBUG] [2020-10-06 10:26] test04SelectEmployeeByNo()
+[DEBUG] [2020-10-06 10:26] ==>  Preparing: SELECT EMPNO, EMPNAME, TITLE, MANAGER, SALARY, DNO FROM EMPLOYEE WHERE EMPNO = 4377
+[DEBUG] [2020-10-06 10:26] ==> Parameters: 
+[TRACE] [2020-10-06 10:26] <==    Columns: EMPNO, EMPNAME, TITLE, MANAGER, SALARY, DNO
+[TRACE] [2020-10-06 10:26] <==        Row: 4377, 이성래, 1, null, 5000000, 2
+[DEBUG] [2020-10-06 10:26] <==      Total: 1
+[DEBUG] [2020-10-06 10:26] Employee [empNo=4377, empName=이성래, title=1, manager=null, salary=5000000, dept=null]
+[DEBUG] [2020-10-06 10:26] test05DeleteEmployee()
+[DEBUG] [2020-10-06 10:26] ==>  Preparing: DELETE FROM EMPLOYEE WHERE EMPNO = ?
+[DEBUG] [2020-10-06 10:26] ==> Parameters: 1004(Integer)
+[DEBUG] [2020-10-06 10:26] <==    Updates: 1
+[DEBUG] [2020-10-06 10:26] testDataSource()
+[DEBUG] [2020-10-06 10:26] session org.apache.ibatis.session.defaults.DefaultSqlSession@4ce20f29
+[DEBUG] [2020-10-06 10:27] testARegisterTransaction_Dept_Fail()
+[DEBUG] [2020-10-06 10:27] ==>  Preparing: INSERT INTO DEPARTMENT VALUES(?, ?, ?)
+[DEBUG] [2020-10-06 10:27] ==> Parameters: 1(Integer), 태스크포스(String), 10(Integer)
+[DEBUG] [2020-10-06 10:27] testBRegisterTransaction_Emp_Fail()
+[DEBUG] [2020-10-06 10:27] ==>  Preparing: INSERT INTO DEPARTMENT VALUES(?, ?, ?)
+[DEBUG] [2020-10-06 10:27] ==> Parameters: 6(Integer), 태스크포스(String), 10(Integer)
+[DEBUG] [2020-10-06 10:27] <==    Updates: 1
+[DEBUG] [2020-10-06 10:27] ==>  Preparing: INSERT INTO EMPLOYEE(EMPNO, EMPNAME, TITLE, MANAGER, SALARY, DNO) VALUES (?, ?, ?, ?, ?, ?)
+[DEBUG] [2020-10-06 10:27] ==> Parameters: 4377(Integer), 박신혜(String), 과장(String), 4377(Integer), 4100000(Integer), 6(Integer)
+[DEBUG] [2020-10-06 10:27] testCRegisterTransaction_Success()
+[DEBUG] [2020-10-06 10:27] ==>  Preparing: INSERT INTO DEPARTMENT VALUES(?, ?, ?)
+[DEBUG] [2020-10-06 10:27] ==> Parameters: 6(Integer), 태스크포스(String), 10(Integer)
+[DEBUG] [2020-10-06 10:27] <==    Updates: 1
+[DEBUG] [2020-10-06 10:27] ==>  Preparing: INSERT INTO EMPLOYEE(EMPNO, EMPNAME, TITLE, MANAGER, SALARY, DNO) VALUES (?, ?, ?, ?, ?, ?)
+[DEBUG] [2020-10-06 10:27] ==> Parameters: 1005(Integer), 박신혜(String), 과장(String), 4377(Integer), 4100000(Integer), 6(Integer)
+[DEBUG] [2020-10-06 10:27] <==    Updates: 1
+[DEBUG] [2020-10-06 10:27] testDUnRegisterTransaction_Dept_Fail()
+[DEBUG] [2020-10-06 10:27] ==>  Preparing: DELETE FROM EMPLOYEE WHERE EMPNO = ?
+[DEBUG] [2020-10-06 10:27] ==> Parameters: 1005(Integer)
+[DEBUG] [2020-10-06 10:27] <==    Updates: 1
+[DEBUG] [2020-10-06 10:27] ==>  Preparing: DELETE FROM DEPARTMENT WHERE DEPTNO = ?
+[DEBUG] [2020-10-06 10:27] ==> Parameters: 100(Integer)
+[DEBUG] [2020-10-06 10:27] <==    Updates: 0
+[DEBUG] [2020-10-06 10:27] testEUnRegisterTransaction_Emp_Fail()
+[DEBUG] [2020-10-06 10:27] ==>  Preparing: DELETE FROM EMPLOYEE WHERE EMPNO = ?
+[DEBUG] [2020-10-06 10:27] ==> Parameters: 9999(Integer)
+[DEBUG] [2020-10-06 10:27] <==    Updates: 0
+[DEBUG] [2020-10-06 10:27] ==>  Preparing: DELETE FROM DEPARTMENT WHERE DEPTNO = ?
+[DEBUG] [2020-10-06 10:27] ==> Parameters: 6(Integer)
+[DEBUG] [2020-10-06 10:27] testFUnRegisterTransaction_Success()
+[DEBUG] [2020-10-06 10:27] ==>  Preparing: DELETE FROM EMPLOYEE WHERE EMPNO = ?
+[DEBUG] [2020-10-06 10:27] ==> Parameters: 1005(Integer)
+[DEBUG] [2020-10-06 10:27] <==    Updates: 1
+[DEBUG] [2020-10-06 10:27] ==>  Preparing: DELETE FROM DEPARTMENT WHERE DEPTNO = ?
+[DEBUG] [2020-10-06 10:27] ==> Parameters: 6(Integer)
+[DEBUG] [2020-10-06 10:27] <==    Updates: 1
+[DEBUG] [2020-10-06 10:27] testDataSource()
+[DEBUG] [2020-10-06 10:27] DataSource HikariDataSource (HikariPool-1)
+[DEBUG] [2020-10-06 10:27] LoginTimeout 30
+[DEBUG] [2020-10-06 10:27] test01SelectDepartmentByAll()
+[DEBUG] [2020-10-06 10:27] ==>  Preparing: SELECT DEPTNO, DEPTNAME, FLOOR FROM DEPARTMENT
+[DEBUG] [2020-10-06 10:27] ==> Parameters: 
+[TRACE] [2020-10-06 10:27] <==    Columns: DEPTNO, DEPTNAME, FLOOR
+[TRACE] [2020-10-06 10:27] <==        Row: 1, 영업, 8
+[TRACE] [2020-10-06 10:27] <==        Row: 2, 기획, 10
+[TRACE] [2020-10-06 10:27] <==        Row: 3, 개발, 9
+[TRACE] [2020-10-06 10:27] <==        Row: 4, 총무, 7
+[DEBUG] [2020-10-06 10:27] <==      Total: 4
+[DEBUG] [2020-10-06 10:27] test02InsertDepartment()
+[DEBUG] [2020-10-06 10:27] ==>  Preparing: INSERT INTO DEPARTMENT VALUES(?, ?, ?)
+[DEBUG] [2020-10-06 10:27] ==> Parameters: 5(Integer), 마케팅(String), 20(Integer)
+[DEBUG] [2020-10-06 10:27] <==    Updates: 1
+[DEBUG] [2020-10-06 10:27] test03UpdateDepartment()
+[DEBUG] [2020-10-06 10:27] ==>  Preparing: UPDATE DEPARTMENT SET DEPTNAME = ?, FLOOR = ? WHERE DEPTNO = ?
+[DEBUG] [2020-10-06 10:27] ==> Parameters: 마케팅2(String), 10(Integer), 5(Integer)
+[DEBUG] [2020-10-06 10:27] <==    Updates: 1
+[DEBUG] [2020-10-06 10:27] test04SelectDepartmentByNo()
+[DEBUG] [2020-10-06 10:27] ==>  Preparing: SELECT DEPTNO, DEPTNAME, FLOOR FROM DEPARTMENT WHERE DEPTNO = 1
+[DEBUG] [2020-10-06 10:27] ==> Parameters: 
+[TRACE] [2020-10-06 10:27] <==    Columns: DEPTNO, DEPTNAME, FLOOR
+[TRACE] [2020-10-06 10:27] <==        Row: 1, 영업, 8
+[DEBUG] [2020-10-06 10:27] <==      Total: 1
+[DEBUG] [2020-10-06 10:27] Department [deptNo=1, deptName=영업, floor=8]
+[DEBUG] [2020-10-06 10:27] test05DeleteDepartment()
+[DEBUG] [2020-10-06 10:27] ==>  Preparing: DELETE FROM DEPARTMENT WHERE DEPTNO = ?
+[DEBUG] [2020-10-06 10:27] ==> Parameters: 5(Integer)
+[DEBUG] [2020-10-06 10:27] <==    Updates: 1
+[DEBUG] [2020-10-06 10:27] test01SelectEmployeeByAll()
+[DEBUG] [2020-10-06 10:27] ==>  Preparing: SELECT EMPNO, EMPNAME, TITLE, MANAGER, SALARY, DNO FROM EMPLOYEE
+[DEBUG] [2020-10-06 10:27] ==> Parameters: 
+[TRACE] [2020-10-06 10:27] <==    Columns: EMPNO, EMPNAME, TITLE, MANAGER, SALARY, DNO
+[TRACE] [2020-10-06 10:27] <==        Row: 4377, 이성래, 1, null, 5000000, 2
+[TRACE] [2020-10-06 10:27] <==        Row: 3426, 박영권, 3, 4377, 3000000, 1
+[TRACE] [2020-10-06 10:27] <==        Row: 3011, 이수민, 2, 4377, 4000000, 3
+[TRACE] [2020-10-06 10:27] <==        Row: 3427, 최종철, 5, 3011, 1500000, 3
+[TRACE] [2020-10-06 10:27] <==        Row: 1003, 조민희, 3, 4377, 3000000, 2
+[TRACE] [2020-10-06 10:27] <==        Row: 2106, 김창섭, 4, 1003, 2500000, 2
+[TRACE] [2020-10-06 10:27] <==        Row: 1365, 김상원, 5, 3426, 1500000, 1
+[DEBUG] [2020-10-06 10:27] <==      Total: 7
+[DEBUG] [2020-10-06 10:27] test02InsertEmployee()
+[DEBUG] [2020-10-06 10:27] ==>  Preparing: INSERT INTO EMPLOYEE(EMPNO, EMPNAME, TITLE, MANAGER, SALARY, DNO) VALUES (?, ?, ?, ?, ?, ?)
+[DEBUG] [2020-10-06 10:27] ==> Parameters: 1004(Integer), 김자바(String), 1(String), 4377(Integer), 3000000(Integer), 1(Integer)
+[DEBUG] [2020-10-06 10:27] <==    Updates: 1
+[DEBUG] [2020-10-06 10:27] test03UpdateEmployee()
+[DEBUG] [2020-10-06 10:27] ==>  Preparing: UPDATE EMPLOYEE SET EMPNAME = ?, TITLE = ?, MANAGER = ?, SALARY = ?, DNO = ? WHERE EMPNO = ?
+[DEBUG] [2020-10-06 10:27] ==> Parameters: 김김김(String), 2(String), 1003(Integer), 2000000(Integer), 2(Integer), 1004(Integer)
+[DEBUG] [2020-10-06 10:27] <==    Updates: 1
+[DEBUG] [2020-10-06 10:27] test04SelectEmployeeByNo()
+[DEBUG] [2020-10-06 10:27] ==>  Preparing: SELECT EMPNO, EMPNAME, TITLE, MANAGER, SALARY, DNO FROM EMPLOYEE WHERE EMPNO = 4377
+[DEBUG] [2020-10-06 10:27] ==> Parameters: 
+[TRACE] [2020-10-06 10:27] <==    Columns: EMPNO, EMPNAME, TITLE, MANAGER, SALARY, DNO
+[TRACE] [2020-10-06 10:27] <==        Row: 4377, 이성래, 1, null, 5000000, 2
+[DEBUG] [2020-10-06 10:27] <==      Total: 1
+[DEBUG] [2020-10-06 10:27] Employee [empNo=4377, empName=이성래, title=1, manager=null, salary=5000000, dept=null]
+[DEBUG] [2020-10-06 10:27] test05DeleteEmployee()
+[DEBUG] [2020-10-06 10:27] ==>  Preparing: DELETE FROM EMPLOYEE WHERE EMPNO = ?
+[DEBUG] [2020-10-06 10:27] ==> Parameters: 1004(Integer)
+[DEBUG] [2020-10-06 10:27] <==    Updates: 1
+[DEBUG] [2020-10-06 10:27] testDataSource()
+[DEBUG] [2020-10-06 10:27] session org.apache.ibatis.session.defaults.DefaultSqlSession@2762c1c3
+[DEBUG] [2020-10-06 11:04] testDataSource()
+[DEBUG] [2020-10-06 11:04] DataSource HikariDataSource (HikariPool-1)
+[DEBUG] [2020-10-06 11:04] LoginTimeout 30
+[DEBUG] [2020-10-06 11:04] test01SelectDepartmentByAll()
+[DEBUG] [2020-10-06 11:04] ==>  Preparing: SELECT DEPTNO, DEPTNAME, FLOOR FROM DEPARTMENT
+[DEBUG] [2020-10-06 11:04] ==> Parameters: 
+[TRACE] [2020-10-06 11:04] <==    Columns: DEPTNO, DEPTNAME, FLOOR
+[TRACE] [2020-10-06 11:04] <==        Row: 1, 영업, 8
+[TRACE] [2020-10-06 11:04] <==        Row: 2, 기획, 10
+[TRACE] [2020-10-06 11:04] <==        Row: 3, 개발, 9
+[TRACE] [2020-10-06 11:04] <==        Row: 4, 총무, 7
+[DEBUG] [2020-10-06 11:04] <==      Total: 4
+[DEBUG] [2020-10-06 11:04] test02InsertDepartment()
+[DEBUG] [2020-10-06 11:04] ==>  Preparing: INSERT INTO DEPARTMENT VALUES(?, ?, ?)
+[DEBUG] [2020-10-06 11:04] ==> Parameters: 5(Integer), 마케팅(String), 20(Integer)
+[DEBUG] [2020-10-06 11:04] <==    Updates: 1
+[DEBUG] [2020-10-06 11:04] test03UpdateDepartment()
+[DEBUG] [2020-10-06 11:04] ==>  Preparing: UPDATE DEPARTMENT SET DEPTNAME = ?, FLOOR = ? WHERE DEPTNO = ?
+[DEBUG] [2020-10-06 11:04] ==> Parameters: 마케팅2(String), 10(Integer), 5(Integer)
+[DEBUG] [2020-10-06 11:04] <==    Updates: 1
+[DEBUG] [2020-10-06 11:04] test04SelectDepartmentByNo()
+[DEBUG] [2020-10-06 11:04] ==>  Preparing: SELECT DEPTNO, DEPTNAME, FLOOR FROM DEPARTMENT WHERE DEPTNO = 1
+[DEBUG] [2020-10-06 11:04] ==> Parameters: 
+[TRACE] [2020-10-06 11:04] <==    Columns: DEPTNO, DEPTNAME, FLOOR
+[TRACE] [2020-10-06 11:04] <==        Row: 1, 영업, 8
+[DEBUG] [2020-10-06 11:04] <==      Total: 1
+[DEBUG] [2020-10-06 11:04] Department [deptNo=1, deptName=영업, floor=8]
+[DEBUG] [2020-10-06 11:04] test05DeleteDepartment()
+[DEBUG] [2020-10-06 11:04] ==>  Preparing: DELETE FROM DEPARTMENT WHERE DEPTNO = ?
+[DEBUG] [2020-10-06 11:04] ==> Parameters: 5(Integer)
+[DEBUG] [2020-10-06 11:04] <==    Updates: 1
+[DEBUG] [2020-10-06 11:04] test01SelectEmployeeByAll()
+[DEBUG] [2020-10-06 11:04] ==>  Preparing: SELECT EMPNO, EMPNAME, TITLE, MANAGER, SALARY, DNO FROM EMPLOYEE
+[DEBUG] [2020-10-06 11:04] ==> Parameters: 
+[TRACE] [2020-10-06 11:04] <==    Columns: EMPNO, EMPNAME, TITLE, MANAGER, SALARY, DNO
+[TRACE] [2020-10-06 11:04] <==        Row: 4377, 이성래, 1, null, 5000000, 2
+[TRACE] [2020-10-06 11:04] <==        Row: 3426, 박영권, 3, 4377, 3000000, 1
+[TRACE] [2020-10-06 11:04] <==        Row: 3011, 이수민, 2, 4377, 4000000, 3
+[TRACE] [2020-10-06 11:04] <==        Row: 3427, 최종철, 5, 3011, 1500000, 3
+[TRACE] [2020-10-06 11:04] <==        Row: 1003, 조민희, 3, 4377, 3000000, 2
+[TRACE] [2020-10-06 11:04] <==        Row: 2106, 김창섭, 4, 1003, 2500000, 2
+[TRACE] [2020-10-06 11:04] <==        Row: 1365, 김상원, 5, 3426, 1500000, 1
+[DEBUG] [2020-10-06 11:04] <==      Total: 7
+[DEBUG] [2020-10-06 11:04] test02InsertEmployee()
+[DEBUG] [2020-10-06 11:04] ==>  Preparing: INSERT INTO EMPLOYEE(EMPNO, EMPNAME, TITLE, MANAGER, SALARY, DNO) VALUES (?, ?, ?, ?, ?, ?)
+[DEBUG] [2020-10-06 11:04] ==> Parameters: 1004(Integer), 김자바(String), 1(String), 4377(Integer), 3000000(Integer), 1(Integer)
+[DEBUG] [2020-10-06 11:04] <==    Updates: 1
+[DEBUG] [2020-10-06 11:04] test03UpdateEmployee()
+[DEBUG] [2020-10-06 11:04] ==>  Preparing: UPDATE EMPLOYEE SET EMPNAME = ?, TITLE = ?, MANAGER = ?, SALARY = ?, DNO = ? WHERE EMPNO = ?
+[DEBUG] [2020-10-06 11:04] ==> Parameters: 김김김(String), 2(String), 1003(Integer), 2000000(Integer), 2(Integer), 1004(Integer)
+[DEBUG] [2020-10-06 11:04] <==    Updates: 1
+[DEBUG] [2020-10-06 11:04] test04SelectEmployeeByNo()
+[DEBUG] [2020-10-06 11:04] ==>  Preparing: SELECT EMPNO, EMPNAME, TITLE, MANAGER, SALARY, DNO FROM EMPLOYEE WHERE EMPNO = 4377
+[DEBUG] [2020-10-06 11:04] ==> Parameters: 
+[TRACE] [2020-10-06 11:04] <==    Columns: EMPNO, EMPNAME, TITLE, MANAGER, SALARY, DNO
+[TRACE] [2020-10-06 11:04] <==        Row: 4377, 이성래, 1, null, 5000000, 2
+[DEBUG] [2020-10-06 11:04] <==      Total: 1
+[DEBUG] [2020-10-06 11:04] Employee [empNo=4377, empName=이성래, title=1, manager=null, salary=5000000, dept=null]
+[DEBUG] [2020-10-06 11:04] test05DeleteEmployee()
+[DEBUG] [2020-10-06 11:04] ==>  Preparing: DELETE FROM EMPLOYEE WHERE EMPNO = ?
+[DEBUG] [2020-10-06 11:04] ==> Parameters: 1004(Integer)
+[DEBUG] [2020-10-06 11:04] <==    Updates: 1
+[DEBUG] [2020-10-06 11:04] testATrRegisterTransaction_Dept_Fail()
+[DEBUG] [2020-10-06 11:04] ==>  Preparing: INSERT INTO DEPARTMENT VALUES(?, ?, ?)
+[DEBUG] [2020-10-06 11:04] ==> Parameters: 1(Integer), 인사(String), 10(Integer)
+[DEBUG] [2020-10-06 11:04] testBTrRegisterTransaction_Emp_Fail()
+[DEBUG] [2020-10-06 11:04] ==>  Preparing: INSERT INTO DEPARTMENT VALUES(?, ?, ?)
+[DEBUG] [2020-10-06 11:04] ==> Parameters: 7(Integer), 인사(String), 10(Integer)
+[DEBUG] [2020-10-06 11:04] <==    Updates: 1
+[DEBUG] [2020-10-06 11:04] ==>  Preparing: INSERT INTO EMPLOYEE(EMPNO, EMPNAME, TITLE, MANAGER, SALARY, DNO) VALUES (?, ?, ?, ?, ?, ?)
+[DEBUG] [2020-10-06 11:04] ==> Parameters: 4377(Integer), 박규영(String), 과장(String), 4377(Integer), 4100000(Integer), 7(Integer)
+[DEBUG] [2020-10-06 11:04] testCTrRegisterTransaction_Success()
+[DEBUG] [2020-10-06 11:04] ==>  Preparing: INSERT INTO DEPARTMENT VALUES(?, ?, ?)
+[DEBUG] [2020-10-06 11:04] ==> Parameters: 7(Integer), 인사(String), 10(Integer)
+[DEBUG] [2020-10-06 11:04] <==    Updates: 1
+[DEBUG] [2020-10-06 11:04] ==>  Preparing: INSERT INTO EMPLOYEE(EMPNO, EMPNAME, TITLE, MANAGER, SALARY, DNO) VALUES (?, ?, ?, ?, ?, ?)
+[DEBUG] [2020-10-06 11:04] ==> Parameters: 1006(Integer), 박규영(String), 과장(String), 4377(Integer), 4100000(Integer), 7(Integer)
+[DEBUG] [2020-10-06 11:04] <==    Updates: 1
+[DEBUG] [2020-10-06 11:04] testDTrUnRegisterTransaction_Dept_Fail()
+[DEBUG] [2020-10-06 11:04] ==>  Preparing: DELETE FROM EMPLOYEE WHERE EMPNO = ?
+[DEBUG] [2020-10-06 11:04] ==> Parameters: 1006(Integer)
+[DEBUG] [2020-10-06 11:04] <==    Updates: 1
+[DEBUG] [2020-10-06 11:04] ==>  Preparing: DELETE FROM DEPARTMENT WHERE DEPTNO = ?
+[DEBUG] [2020-10-06 11:04] ==> Parameters: 100(Integer)
+[DEBUG] [2020-10-06 11:04] <==    Updates: 0
+[DEBUG] [2020-10-06 11:04] testETrUnRegisterTransaction_Emp_Fail()
+[DEBUG] [2020-10-06 11:04] ==>  Preparing: DELETE FROM EMPLOYEE WHERE EMPNO = ?
+[DEBUG] [2020-10-06 11:04] ==> Parameters: 9999(Integer)
+[DEBUG] [2020-10-06 11:04] <==    Updates: 0
+[DEBUG] [2020-10-06 11:04] ==>  Preparing: DELETE FROM DEPARTMENT WHERE DEPTNO = ?
+[DEBUG] [2020-10-06 11:04] ==> Parameters: 7(Integer)
+[DEBUG] [2020-10-06 11:04] testFTrUnRegisterTransaction_Success()
+[DEBUG] [2020-10-06 11:04] ==>  Preparing: DELETE FROM EMPLOYEE WHERE EMPNO = ?
+[DEBUG] [2020-10-06 11:04] ==> Parameters: 1006(Integer)
+[DEBUG] [2020-10-06 11:04] <==    Updates: 1
+[DEBUG] [2020-10-06 11:04] ==>  Preparing: DELETE FROM DEPARTMENT WHERE DEPTNO = ?
+[DEBUG] [2020-10-06 11:04] ==> Parameters: 7(Integer)
+[DEBUG] [2020-10-06 11:04] <==    Updates: 1
+[DEBUG] [2020-10-06 11:04] testARegisterTransaction_Dept_Fail()
+[DEBUG] [2020-10-06 11:04] ==>  Preparing: INSERT INTO DEPARTMENT VALUES(?, ?, ?)
+[DEBUG] [2020-10-06 11:04] ==> Parameters: 1(Integer), 태스크포스(String), 10(Integer)
+[DEBUG] [2020-10-06 11:04] testBRegisterTransaction_Emp_Fail()
+[DEBUG] [2020-10-06 11:04] ==>  Preparing: INSERT INTO DEPARTMENT VALUES(?, ?, ?)
+[DEBUG] [2020-10-06 11:04] ==> Parameters: 6(Integer), 태스크포스(String), 10(Integer)
+[DEBUG] [2020-10-06 11:04] <==    Updates: 1
+[DEBUG] [2020-10-06 11:04] ==>  Preparing: INSERT INTO EMPLOYEE(EMPNO, EMPNAME, TITLE, MANAGER, SALARY, DNO) VALUES (?, ?, ?, ?, ?, ?)
+[DEBUG] [2020-10-06 11:04] ==> Parameters: 4377(Integer), 박신혜(String), 과장(String), 4377(Integer), 4100000(Integer), 6(Integer)
+[DEBUG] [2020-10-06 11:04] testCRegisterTransaction_Success()
+[DEBUG] [2020-10-06 11:04] ==>  Preparing: INSERT INTO DEPARTMENT VALUES(?, ?, ?)
+[DEBUG] [2020-10-06 11:04] ==> Parameters: 6(Integer), 태스크포스(String), 10(Integer)
+[DEBUG] [2020-10-06 11:04] <==    Updates: 1
+[DEBUG] [2020-10-06 11:04] ==>  Preparing: INSERT INTO EMPLOYEE(EMPNO, EMPNAME, TITLE, MANAGER, SALARY, DNO) VALUES (?, ?, ?, ?, ?, ?)
+[DEBUG] [2020-10-06 11:04] ==> Parameters: 1005(Integer), 박신혜(String), 과장(String), 4377(Integer), 4100000(Integer), 6(Integer)
+[DEBUG] [2020-10-06 11:04] <==    Updates: 1
+[DEBUG] [2020-10-06 11:04] testDUnRegisterTransaction_Dept_Fail()
+[DEBUG] [2020-10-06 11:04] ==>  Preparing: DELETE FROM EMPLOYEE WHERE EMPNO = ?
+[DEBUG] [2020-10-06 11:04] ==> Parameters: 1005(Integer)
+[DEBUG] [2020-10-06 11:04] <==    Updates: 1
+[DEBUG] [2020-10-06 11:04] ==>  Preparing: DELETE FROM DEPARTMENT WHERE DEPTNO = ?
+[DEBUG] [2020-10-06 11:04] ==> Parameters: 100(Integer)
+[DEBUG] [2020-10-06 11:04] <==    Updates: 0
+[DEBUG] [2020-10-06 11:04] testEUnRegisterTransaction_Emp_Fail()
+[DEBUG] [2020-10-06 11:04] ==>  Preparing: DELETE FROM EMPLOYEE WHERE EMPNO = ?
+[DEBUG] [2020-10-06 11:04] ==> Parameters: 9999(Integer)
+[DEBUG] [2020-10-06 11:04] <==    Updates: 0
+[DEBUG] [2020-10-06 11:04] ==>  Preparing: DELETE FROM DEPARTMENT WHERE DEPTNO = ?
+[DEBUG] [2020-10-06 11:04] ==> Parameters: 6(Integer)
+[DEBUG] [2020-10-06 11:04] testFUnRegisterTransaction_Success()
+[DEBUG] [2020-10-06 11:04] ==>  Preparing: DELETE FROM EMPLOYEE WHERE EMPNO = ?
+[DEBUG] [2020-10-06 11:04] ==> Parameters: 1005(Integer)
+[DEBUG] [2020-10-06 11:04] <==    Updates: 1
+[DEBUG] [2020-10-06 11:04] ==>  Preparing: DELETE FROM DEPARTMENT WHERE DEPTNO = ?
+[DEBUG] [2020-10-06 11:04] ==> Parameters: 6(Integer)
+[DEBUG] [2020-10-06 11:04] <==    Updates: 1
+[DEBUG] [2020-10-06 11:04] testDataSource()
+[DEBUG] [2020-10-06 11:04] session org.apache.ibatis.session.defaults.DefaultSqlSession@670bdf77
