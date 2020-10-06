@@ -19,12 +19,12 @@ import mybatis_spring_study.dto.Employee;
 @RunWith(SpringJUnit4ClassRunner.class)
 @ContextConfiguration(classes = { ContextRoot.class })
 @FixMethodOrder(MethodSorters.NAME_ASCENDING)
-public class TransactionServiceTest {
-
-	protected static final Log log = LogFactory.getLog(TransactionServiceTest.class);
+public class TransactionAOPServiceTest {
+	
+	protected static final Log log = LogFactory.getLog(TransactionAOPServiceTest.class);
 
 	@Autowired
-	private TransactionService service;
+	private TransactionAOPService service;
 
 	@After
 	public void tearDown() throws Exception {
@@ -32,57 +32,57 @@ public class TransactionServiceTest {
 	}
 
 	@Test(expected = DuplicateKeyException.class)
-	public void testARegisterTransaction_Dept_Fail() {
+	public void testATrRegisterTransaction_Dept_Fail() {
 		log.debug(Thread.currentThread().getStackTrace()[1].getMethodName() + "()");
-		Department department = new Department(1, "태스크포스", 10); // DuplicateKeyException
-		Employee employee = new Employee(1004, "박신혜", "과장", new Employee(4377), 4100000, department);
+		Department department = new Department(1, "인사", 10); // DuplicateKeyException
+		Employee employee = new Employee(1006, "박규영", "과장", new Employee(4377), 4100000, department);
 
-		service.trRegister(department, employee);
+		service.trRegisterTransaction(department, employee);
 	}
 
 	@Test(expected = DuplicateKeyException.class)
-	public void testBRegisterTransaction_Emp_Fail() {
+	public void testBTrRegisterTransaction_Emp_Fail() {
 		log.debug(Thread.currentThread().getStackTrace()[1].getMethodName() + "()");
-		Department department = new Department(6, "태스크포스", 10);
-		Employee employee = new Employee(4377, "박신혜", "과장", new Employee(4377), 4100000, department);
+		Department department = new Department(7, "인사", 10);
+		Employee employee = new Employee(4377, "박규영", "과장", new Employee(4377), 4100000, department);
 
-		service.trRegister(department, employee);
+		service.trRegisterTransaction(department, employee);
 	}
 
 	@Test
-	public void testCRegisterTransaction_Success() {
+	public void testCTrRegisterTransaction_Success() {
 		log.debug(Thread.currentThread().getStackTrace()[1].getMethodName() + "()");
-		Department department = new Department(6, "태스크포스", 10);
-		Employee employee = new Employee(1005, "박신혜", "과장", new Employee(4377), 4100000, department);
+		Department department = new Department(7, "인사", 10);
+		Employee employee = new Employee(1006, "박규영", "과장", new Employee(4377), 4100000, department);
 
-		service.trRegister(department, employee);
+		service.trRegisterTransaction(department, employee);
 	}
 
 	@Test(expected = RuntimeException.class)
-	public void testDUnRegisterTransaction_Dept_Fail() {
+	public void testDTrUnRegisterTransaction_Dept_Fail() {
 		log.debug(Thread.currentThread().getStackTrace()[1].getMethodName() + "()");
 		Department department = new Department(100); // RuntimeException -> roll back
-		Employee employee = new Employee(1005); // roll back 되므로 삭제 되면 안됨
+		Employee employee = new Employee(1006); // roll back 되므로 삭제 되면 안됨
 
-		service.trUnRegister(department, employee);
+		service.trUnRegisterTransaction(department, employee);
 	}
 
 	@Test(expected = RuntimeException.class)
-	public void testEUnRegisterTransaction_Emp_Fail() {
+	public void testETrUnRegisterTransaction_Emp_Fail() {
 		log.debug(Thread.currentThread().getStackTrace()[1].getMethodName() + "()");
-		Department department = new Department(6); // 삭제
+		Department department = new Department(7); // 삭제
 		Employee employee = new Employee(9999); // RuntimeException -> roll back
 
-		service.trUnRegister(department, employee);
+		service.trUnRegisterTransaction(department, employee);
 	}
 
 	@Test
-	public void testFUnRegisterTransaction_Success() {
+	public void testFTrUnRegisterTransaction_Success() {
 		log.debug(Thread.currentThread().getStackTrace()[1].getMethodName() + "()");
-		Department department = new Department(6);
-		Employee employee = new Employee(1005);
+		Department department = new Department(7);
+		Employee employee = new Employee(1006);
 
-		service.trUnRegister(department, employee);
+		service.trUnRegisterTransaction(department, employee);
 	}
 
 }

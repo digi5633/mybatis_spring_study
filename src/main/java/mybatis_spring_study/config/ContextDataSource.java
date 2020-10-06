@@ -10,13 +10,14 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.jdbc.datasource.DataSourceTransactionManager;
 import org.springframework.transaction.PlatformTransactionManager;
-import org.springframework.transaction.annotation.EnableTransactionManagement;
 
 import com.zaxxer.hikari.HikariConfig;
 import com.zaxxer.hikari.HikariDataSource;
 
 @Configuration
+/*
 @EnableTransactionManagement
+*/
 public class ContextDataSource {
 
 	@Bean
@@ -42,9 +43,11 @@ public class ContextDataSource {
 		return new DataSourceTransactionManager(dataSource());
 	}
 
-	/*public PlatformTransactionManager transactionMangager() {
+	/*
+	public PlatformTransactionManager transactionMangager() {
 		DataSourceTransactionManager tm = new DataSourceTransactionManager();
 		tm.setDataSource(dataSource());
 		return tm;
-	}*/
+	}
+	*/
 }
