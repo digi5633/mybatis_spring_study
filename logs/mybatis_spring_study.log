@@ -75,3 +75,271 @@
 [DEBUG] [2020-10-06 12:07] ==>  Preparing: DELETE FROM DEPARTMENT WHERE DEPTNO = ?
 [DEBUG] [2020-10-06 12:07] ==> Parameters: 5(Integer)
 [DEBUG] [2020-10-06 12:07] <==    Updates: 1
+[DEBUG] [2020-10-06 12:13] test01SelectDepartmentByAll()
+[DEBUG] [2020-10-06 12:13] ==>  Preparing: SELECT DEPTNO, DEPTNAME, FLOOR FROM DEPARTMENT
+[DEBUG] [2020-10-06 12:13] ==> Parameters: 
+[TRACE] [2020-10-06 12:13] <==    Columns: DEPTNO, DEPTNAME, FLOOR
+[TRACE] [2020-10-06 12:13] <==        Row: 1, ì˜ì—…, 8
+[TRACE] [2020-10-06 12:13] <==        Row: 2, ê¸°íš, 10
+[TRACE] [2020-10-06 12:13] <==        Row: 3, ê°œë°œ, 9
+[TRACE] [2020-10-06 12:13] <==        Row: 4, ì´ë¬´, 7
+[DEBUG] [2020-10-06 12:13] <==      Total: 4
+[DEBUG] [2020-10-06 12:13] test02InsertDepartment()
+[DEBUG] [2020-10-06 12:13] ==>  Preparing: INSERT INTO DEPARTMENT VALUES(?, ?, ?)
+[DEBUG] [2020-10-06 12:13] ==> Parameters: 5(Integer), ë§ˆì¼€íŒ…(String), 20(Integer)
+[DEBUG] [2020-10-06 12:13] <==    Updates: 1
+[DEBUG] [2020-10-06 12:13] test03UpdateDepartment()
+[DEBUG] [2020-10-06 12:13] ==>  Preparing: SELECT DEPTNO, DEPTNAME, FLOOR FROM DEPARTMENT
+[DEBUG] [2020-10-06 12:13] ==> Parameters: 
+[TRACE] [2020-10-06 12:13] <==    Columns: DEPTNO, DEPTNAME, FLOOR
+[TRACE] [2020-10-06 12:13] <==        Row: 5, ë§ˆì¼€íŒ…, 20
+[TRACE] [2020-10-06 12:13] <==        Row: 1, ì˜ì—…, 8
+[TRACE] [2020-10-06 12:13] <==        Row: 2, ê¸°íš, 10
+[TRACE] [2020-10-06 12:13] <==        Row: 3, ê°œë°œ, 9
+[TRACE] [2020-10-06 12:13] <==        Row: 4, ì´ë¬´, 7
+[DEBUG] [2020-10-06 12:13] <==      Total: 5
+[DEBUG] [2020-10-06 12:13] test04SelectDepartmentByNo()
+[DEBUG] [2020-10-06 12:13] ==>  Preparing: SELECT DEPTNO, DEPTNAME, FLOOR FROM DEPARTMENT WHERE DEPTNO = ?
+[DEBUG] [2020-10-06 12:13] ==> Parameters: 1(Integer)
+[TRACE] [2020-10-06 12:13] <==    Columns: DEPTNO, DEPTNAME, FLOOR
+[TRACE] [2020-10-06 12:13] <==        Row: 1, ì˜ì—…, 8
+[DEBUG] [2020-10-06 12:13] <==      Total: 1
+[DEBUG] [2020-10-06 12:13] Department [deptNo=1, deptName=ì˜ì—…, floor=8]
+[DEBUG] [2020-10-06 12:13] test05DeleteDepartment()
+[DEBUG] [2020-10-06 12:13] ==>  Preparing: DELETE FROM DEPARTMENT WHERE DEPTNO = ?
+[DEBUG] [2020-10-06 12:13] ==> Parameters: 5(Integer)
+[DEBUG] [2020-10-06 12:13] <==    Updates: 1
+[DEBUG] [2020-10-06 12:13] testDataSource()
+[DEBUG] [2020-10-06 12:13] DataSource HikariDataSource (HikariPool-1)
+[DEBUG] [2020-10-06 12:13] LoginTimeout 30
+[DEBUG] [2020-10-06 12:13] test()
+[DEBUG] [2020-10-06 12:13] session org.apache.ibatis.session.defaults.DefaultSqlSession@28fdd40f
+[DEBUG] [2020-10-06 12:13] test01SelectDepartmentByAll()
+[DEBUG] [2020-10-06 12:13] ==>  Preparing: SELECT DEPTNO, DEPTNAME, FLOOR FROM DEPARTMENT
+[DEBUG] [2020-10-06 12:13] ==> Parameters: 
+[TRACE] [2020-10-06 12:13] <==    Columns: DEPTNO, DEPTNAME, FLOOR
+[TRACE] [2020-10-06 12:13] <==        Row: 1, ¿µ¾÷, 8
+[TRACE] [2020-10-06 12:13] <==        Row: 2, ±âÈ¹, 10
+[TRACE] [2020-10-06 12:13] <==        Row: 3, °³¹ß, 9
+[TRACE] [2020-10-06 12:13] <==        Row: 4, ÃÑ¹«, 7
+[DEBUG] [2020-10-06 12:13] <==      Total: 4
+[DEBUG] [2020-10-06 12:13] test02InsertDepartment()
+[DEBUG] [2020-10-06 12:13] ==>  Preparing: INSERT INTO DEPARTMENT VALUES(?, ?, ?)
+[DEBUG] [2020-10-06 12:13] ==> Parameters: 5(Integer), ¸¶ÄÉÆÃ(String), 20(Integer)
+[DEBUG] [2020-10-06 12:13] <==    Updates: 1
+[DEBUG] [2020-10-06 12:13] test03UpdateDepartment()
+[DEBUG] [2020-10-06 12:13] ==>  Preparing: SELECT DEPTNO, DEPTNAME, FLOOR FROM DEPARTMENT
+[DEBUG] [2020-10-06 12:13] ==> Parameters: 
+[TRACE] [2020-10-06 12:13] <==    Columns: DEPTNO, DEPTNAME, FLOOR
+[TRACE] [2020-10-06 12:13] <==        Row: 5, ¸¶ÄÉÆÃ, 20
+[TRACE] [2020-10-06 12:13] <==        Row: 1, ¿µ¾÷, 8
+[TRACE] [2020-10-06 12:13] <==        Row: 2, ±âÈ¹, 10
+[TRACE] [2020-10-06 12:13] <==        Row: 3, °³¹ß, 9
+[TRACE] [2020-10-06 12:13] <==        Row: 4, ÃÑ¹«, 7
+[DEBUG] [2020-10-06 12:13] <==      Total: 5
+[DEBUG] [2020-10-06 12:13] test04SelectDepartmentByNo()
+[DEBUG] [2020-10-06 12:13] ==>  Preparing: SELECT DEPTNO, DEPTNAME, FLOOR FROM DEPARTMENT WHERE DEPTNO = ?
+[DEBUG] [2020-10-06 12:13] ==> Parameters: 1(Integer)
+[TRACE] [2020-10-06 12:13] <==    Columns: DEPTNO, DEPTNAME, FLOOR
+[TRACE] [2020-10-06 12:13] <==        Row: 1, ¿µ¾÷, 8
+[DEBUG] [2020-10-06 12:13] <==      Total: 1
+[DEBUG] [2020-10-06 12:13] Department [deptNo=1, deptName=¿µ¾÷, floor=8]
+[DEBUG] [2020-10-06 12:13] test05DeleteDepartment()
+[DEBUG] [2020-10-06 12:13] ==>  Preparing: DELETE FROM DEPARTMENT WHERE DEPTNO = ?
+[DEBUG] [2020-10-06 12:13] ==> Parameters: 5(Integer)
+[DEBUG] [2020-10-06 12:13] <==    Updates: 1
+[DEBUG] [2020-10-06 12:13] test01SelectEmployeeByAll()
+[DEBUG] [2020-10-06 12:13] ==>  Preparing: SELECT EMPNO, EMPNAME, TITLE, MANAGER, SALARY, DNO FROM EMPLOYEE
+[DEBUG] [2020-10-06 12:13] ==> Parameters: 
+[TRACE] [2020-10-06 12:13] <==    Columns: EMPNO, EMPNAME, TITLE, MANAGER, SALARY, DNO
+[TRACE] [2020-10-06 12:13] <==        Row: 4377, ÀÌ¼º·¡, 1, null, 5000000, 2
+[TRACE] [2020-10-06 12:13] <==        Row: 3426, ¹Ú¿µ±Ç, 3, 4377, 3000000, 1
+[TRACE] [2020-10-06 12:13] <==        Row: 3011, ÀÌ¼ö¹Î, 2, 4377, 4000000, 3
+[TRACE] [2020-10-06 12:13] <==        Row: 3427, ÃÖÁ¾Ã¶, 5, 3011, 1500000, 3
+[TRACE] [2020-10-06 12:13] <==        Row: 1003, Á¶¹ÎÈñ, 3, 4377, 3000000, 2
+[TRACE] [2020-10-06 12:13] <==        Row: 2106, ±èÃ¢¼·, 4, 1003, 2500000, 2
+[TRACE] [2020-10-06 12:13] <==        Row: 1365, ±è»ó¿ø, 5, 3426, 1500000, 1
+[DEBUG] [2020-10-06 12:13] <==      Total: 7
+[DEBUG] [2020-10-06 12:13] test02InsertEmployee()
+[DEBUG] [2020-10-06 12:13] ==>  Preparing: INSERT INTO EMPLOYEE(EMPNO, EMPNAME, TITLE, MANAGER, SALARY, DNO) VALUES (?, ?, ?, ?, ?, ?)
+[DEBUG] [2020-10-06 12:13] ==> Parameters: 1004(Integer), ±èÀÚ¹Ù(String), 1(String), 4377(Integer), 3000000(Integer), 1(Integer)
+[DEBUG] [2020-10-06 12:13] <==    Updates: 1
+[DEBUG] [2020-10-06 12:13] test03UpdateEmployee()
+[DEBUG] [2020-10-06 12:13] ==>  Preparing: UPDATE EMPLOYEE SET EMPNAME = ?, TITLE = ?, MANAGER = ?, SALARY = ?, DNO = ? WHERE EMPNO = ?
+[DEBUG] [2020-10-06 12:13] ==> Parameters: ±è±è±è(String), 2(String), 1003(Integer), 2000000(Integer), 2(Integer), 1004(Integer)
+[DEBUG] [2020-10-06 12:13] <==    Updates: 1
+[DEBUG] [2020-10-06 12:13] test04SelectEmployeeByNo()
+[DEBUG] [2020-10-06 12:13] ==>  Preparing: SELECT EMPNO, EMPNAME, TITLE, MANAGER, SALARY, DNO FROM EMPLOYEE WHERE EMPNO = 4377
+[DEBUG] [2020-10-06 12:13] ==> Parameters: 
+[TRACE] [2020-10-06 12:13] <==    Columns: EMPNO, EMPNAME, TITLE, MANAGER, SALARY, DNO
+[TRACE] [2020-10-06 12:13] <==        Row: 4377, ÀÌ¼º·¡, 1, null, 5000000, 2
+[DEBUG] [2020-10-06 12:13] <==      Total: 1
+[DEBUG] [2020-10-06 12:13] Employee [empNo=4377, empName=ÀÌ¼º·¡, title=1, manager=null, salary=5000000, dept=null]
+[DEBUG] [2020-10-06 12:13] test05DeleteEmployee()
+[DEBUG] [2020-10-06 12:13] ==>  Preparing: DELETE FROM EMPLOYEE WHERE EMPNO = ?
+[DEBUG] [2020-10-06 12:13] ==> Parameters: 1004(Integer)
+[DEBUG] [2020-10-06 12:13] <==    Updates: 1
+[DEBUG] [2020-10-06 12:26] testDataSource()
+[DEBUG] [2020-10-06 12:26] DataSource HikariDataSource (HikariPool-1)
+[DEBUG] [2020-10-06 12:26] LoginTimeout 30
+[DEBUG] [2020-10-06 12:26] test()
+[DEBUG] [2020-10-06 12:26] session org.apache.ibatis.session.defaults.DefaultSqlSession@6d0a3b07
+[DEBUG] [2020-10-06 12:26] test01SelectDepartmentByAll()
+[DEBUG] [2020-10-06 12:26] ==>  Preparing: SELECT DEPTNO, DEPTNAME, FLOOR FROM DEPARTMENT
+[DEBUG] [2020-10-06 12:26] ==> Parameters: 
+[TRACE] [2020-10-06 12:26] <==    Columns: DEPTNO, DEPTNAME, FLOOR
+[TRACE] [2020-10-06 12:26] <==        Row: 1, ¿µ¾÷, 8
+[TRACE] [2020-10-06 12:26] <==        Row: 2, ±âÈ¹, 10
+[TRACE] [2020-10-06 12:26] <==        Row: 3, °³¹ß, 9
+[TRACE] [2020-10-06 12:26] <==        Row: 4, ÃÑ¹«, 7
+[DEBUG] [2020-10-06 12:26] <==      Total: 4
+[DEBUG] [2020-10-06 12:26] test02InsertDepartment()
+[DEBUG] [2020-10-06 12:26] ==>  Preparing: INSERT INTO DEPARTMENT VALUES(?, ?, ?)
+[DEBUG] [2020-10-06 12:26] ==> Parameters: 5(Integer), ¸¶ÄÉÆÃ(String), 20(Integer)
+[DEBUG] [2020-10-06 12:26] <==    Updates: 1
+[DEBUG] [2020-10-06 12:26] test03UpdateDepartment()
+[DEBUG] [2020-10-06 12:26] ==>  Preparing: SELECT DEPTNO, DEPTNAME, FLOOR FROM DEPARTMENT
+[DEBUG] [2020-10-06 12:26] ==> Parameters: 
+[TRACE] [2020-10-06 12:26] <==    Columns: DEPTNO, DEPTNAME, FLOOR
+[TRACE] [2020-10-06 12:26] <==        Row: 5, ¸¶ÄÉÆÃ, 20
+[TRACE] [2020-10-06 12:26] <==        Row: 1, ¿µ¾÷, 8
+[TRACE] [2020-10-06 12:26] <==        Row: 2, ±âÈ¹, 10
+[TRACE] [2020-10-06 12:26] <==        Row: 3, °³¹ß, 9
+[TRACE] [2020-10-06 12:26] <==        Row: 4, ÃÑ¹«, 7
+[DEBUG] [2020-10-06 12:26] <==      Total: 5
+[DEBUG] [2020-10-06 12:26] test04SelectDepartmentByNo()
+[DEBUG] [2020-10-06 12:26] ==>  Preparing: SELECT DEPTNO, DEPTNAME, FLOOR FROM DEPARTMENT WHERE DEPTNO = ?
+[DEBUG] [2020-10-06 12:26] ==> Parameters: 1(Integer)
+[TRACE] [2020-10-06 12:26] <==    Columns: DEPTNO, DEPTNAME, FLOOR
+[TRACE] [2020-10-06 12:26] <==        Row: 1, ¿µ¾÷, 8
+[DEBUG] [2020-10-06 12:26] <==      Total: 1
+[DEBUG] [2020-10-06 12:26] Department [deptNo=1, deptName=¿µ¾÷, floor=8]
+[DEBUG] [2020-10-06 12:26] test05DeleteDepartment()
+[DEBUG] [2020-10-06 12:26] ==>  Preparing: DELETE FROM DEPARTMENT WHERE DEPTNO = ?
+[DEBUG] [2020-10-06 12:26] ==> Parameters: 5(Integer)
+[DEBUG] [2020-10-06 12:26] <==    Updates: 1
+[DEBUG] [2020-10-06 12:26] test01SelectEmployeeByAll()
+[DEBUG] [2020-10-06 12:26] ==>  Preparing: SELECT EMPNO, EMPNAME, TITLE, MANAGER, SALARY, DNO FROM EMPLOYEE
+[DEBUG] [2020-10-06 12:26] ==> Parameters: 
+[TRACE] [2020-10-06 12:26] <==    Columns: EMPNO, EMPNAME, TITLE, MANAGER, SALARY, DNO
+[TRACE] [2020-10-06 12:26] <==        Row: 4377, ÀÌ¼º·¡, 1, null, 5000000, 2
+[TRACE] [2020-10-06 12:26] <==        Row: 3426, ¹Ú¿µ±Ç, 3, 4377, 3000000, 1
+[TRACE] [2020-10-06 12:26] <==        Row: 3011, ÀÌ¼ö¹Î, 2, 4377, 4000000, 3
+[TRACE] [2020-10-06 12:26] <==        Row: 3427, ÃÖÁ¾Ã¶, 5, 3011, 1500000, 3
+[TRACE] [2020-10-06 12:26] <==        Row: 1003, Á¶¹ÎÈñ, 3, 4377, 3000000, 2
+[TRACE] [2020-10-06 12:26] <==        Row: 2106, ±èÃ¢¼·, 4, 1003, 2500000, 2
+[TRACE] [2020-10-06 12:26] <==        Row: 1365, ±è»ó¿ø, 5, 3426, 1500000, 1
+[DEBUG] [2020-10-06 12:26] <==      Total: 7
+[DEBUG] [2020-10-06 12:26] test02InsertEmployee()
+[DEBUG] [2020-10-06 12:26] ==>  Preparing: INSERT INTO EMPLOYEE(EMPNO, EMPNAME, TITLE, MANAGER, SALARY, DNO) VALUES (?, ?, ?, ?, ?, ?)
+[DEBUG] [2020-10-06 12:26] ==> Parameters: 1004(Integer), ±èÀÚ¹Ù(String), 1(String), 4377(Integer), 3000000(Integer), 1(Integer)
+[DEBUG] [2020-10-06 12:26] <==    Updates: 1
+[DEBUG] [2020-10-06 12:26] test03UpdateEmployee()
+[DEBUG] [2020-10-06 12:26] ==>  Preparing: UPDATE EMPLOYEE SET EMPNAME = ?, TITLE = ?, MANAGER = ?, SALARY = ?, DNO = ? WHERE EMPNO = ?
+[DEBUG] [2020-10-06 12:26] ==> Parameters: ±è±è±è(String), 2(String), 1003(Integer), 2000000(Integer), 2(Integer), 1004(Integer)
+[DEBUG] [2020-10-06 12:26] <==    Updates: 1
+[DEBUG] [2020-10-06 12:26] test04SelectEmployeeByNo()
+[DEBUG] [2020-10-06 12:26] ==>  Preparing: SELECT EMPNO, EMPNAME, TITLE, MANAGER, SALARY, DNO FROM EMPLOYEE WHERE EMPNO = 4377
+[DEBUG] [2020-10-06 12:26] ==> Parameters: 
+[TRACE] [2020-10-06 12:26] <==    Columns: EMPNO, EMPNAME, TITLE, MANAGER, SALARY, DNO
+[TRACE] [2020-10-06 12:26] <==        Row: 4377, ÀÌ¼º·¡, 1, null, 5000000, 2
+[DEBUG] [2020-10-06 12:26] <==      Total: 1
+[DEBUG] [2020-10-06 12:26] Employee [empNo=4377, empName=ÀÌ¼º·¡, title=1, manager=null, salary=5000000, dept=null]
+[DEBUG] [2020-10-06 12:26] test05DeleteEmployee()
+[DEBUG] [2020-10-06 12:26] ==>  Preparing: DELETE FROM EMPLOYEE WHERE EMPNO = ?
+[DEBUG] [2020-10-06 12:26] ==> Parameters: 1004(Integer)
+[DEBUG] [2020-10-06 12:26] <==    Updates: 1
+[DEBUG] [2020-10-06 12:26] test01AddEmployee()
+[DEBUG] [2020-10-06 12:26] ==>  Preparing: INSERT INTO EMPLOYEE(EMPNO, EMPNAME, TITLE, MANAGER, SALARY, DNO) VALUES (?, ?, ?, ?, ?, ?)
+[DEBUG] [2020-10-06 12:26] ==> Parameters: 1004(Integer), ±èÀÚ¹Ù(String), 1(String), 4377(Integer), 3000000(Integer), 1(Integer)
+[DEBUG] [2020-10-06 12:26] <==    Updates: 1
+[DEBUG] [2020-10-06 12:26] test02DelEmployee()
+[DEBUG] [2020-10-06 12:26] ==>  Preparing: DELETE FROM EMPLOYEE WHERE EMPNO = ?
+[DEBUG] [2020-10-06 12:26] ==> Parameters: 1004(Integer)
+[DEBUG] [2020-10-06 12:26] <==    Updates: 1
+[DEBUG] [2020-10-06 12:33] testDataSource()
+[DEBUG] [2020-10-06 12:33] DataSource HikariDataSource (HikariPool-1)
+[DEBUG] [2020-10-06 12:33] LoginTimeout 30
+[DEBUG] [2020-10-06 12:33] test()
+[DEBUG] [2020-10-06 12:33] session org.apache.ibatis.session.defaults.DefaultSqlSession@45fe1d9c
+[DEBUG] [2020-10-06 12:33] test01SelectDepartmentByAll()
+[DEBUG] [2020-10-06 12:33] ==>  Preparing: SELECT DEPTNO, DEPTNAME, FLOOR FROM DEPARTMENT
+[DEBUG] [2020-10-06 12:33] ==> Parameters: 
+[TRACE] [2020-10-06 12:33] <==    Columns: DEPTNO, DEPTNAME, FLOOR
+[TRACE] [2020-10-06 12:33] <==        Row: 1, ¿µ¾÷, 8
+[TRACE] [2020-10-06 12:33] <==        Row: 2, ±âÈ¹, 10
+[TRACE] [2020-10-06 12:33] <==        Row: 3, °³¹ß, 9
+[TRACE] [2020-10-06 12:33] <==        Row: 4, ÃÑ¹«, 7
+[DEBUG] [2020-10-06 12:33] <==      Total: 4
+[DEBUG] [2020-10-06 12:33] test02InsertDepartment()
+[DEBUG] [2020-10-06 12:33] ==>  Preparing: INSERT INTO DEPARTMENT VALUES(?, ?, ?)
+[DEBUG] [2020-10-06 12:33] ==> Parameters: 5(Integer), ¸¶ÄÉÆÃ(String), 20(Integer)
+[DEBUG] [2020-10-06 12:33] <==    Updates: 1
+[DEBUG] [2020-10-06 12:33] test03UpdateDepartment()
+[DEBUG] [2020-10-06 12:33] ==>  Preparing: SELECT DEPTNO, DEPTNAME, FLOOR FROM DEPARTMENT
+[DEBUG] [2020-10-06 12:33] ==> Parameters: 
+[TRACE] [2020-10-06 12:33] <==    Columns: DEPTNO, DEPTNAME, FLOOR
+[TRACE] [2020-10-06 12:33] <==        Row: 1, ¿µ¾÷, 8
+[TRACE] [2020-10-06 12:33] <==        Row: 2, ±âÈ¹, 10
+[TRACE] [2020-10-06 12:33] <==        Row: 3, °³¹ß, 9
+[TRACE] [2020-10-06 12:33] <==        Row: 4, ÃÑ¹«, 7
+[TRACE] [2020-10-06 12:33] <==        Row: 5, ¸¶ÄÉÆÃ, 20
+[DEBUG] [2020-10-06 12:33] <==      Total: 5
+[DEBUG] [2020-10-06 12:33] test04SelectDepartmentByNo()
+[DEBUG] [2020-10-06 12:33] ==>  Preparing: SELECT DEPTNO, DEPTNAME, FLOOR FROM DEPARTMENT WHERE DEPTNO = ?
+[DEBUG] [2020-10-06 12:33] ==> Parameters: 1(Integer)
+[TRACE] [2020-10-06 12:33] <==    Columns: DEPTNO, DEPTNAME, FLOOR
+[TRACE] [2020-10-06 12:33] <==        Row: 1, ¿µ¾÷, 8
+[DEBUG] [2020-10-06 12:33] <==      Total: 1
+[DEBUG] [2020-10-06 12:33] Department [deptNo=1, deptName=¿µ¾÷, floor=8]
+[DEBUG] [2020-10-06 12:33] test05DeleteDepartment()
+[DEBUG] [2020-10-06 12:33] ==>  Preparing: DELETE FROM DEPARTMENT WHERE DEPTNO = ?
+[DEBUG] [2020-10-06 12:33] ==> Parameters: 5(Integer)
+[DEBUG] [2020-10-06 12:33] <==    Updates: 1
+[DEBUG] [2020-10-06 12:33] test01SelectEmployeeByAll()
+[DEBUG] [2020-10-06 12:33] ==>  Preparing: SELECT EMPNO, EMPNAME, TITLE, MANAGER, SALARY, DNO FROM EMPLOYEE
+[DEBUG] [2020-10-06 12:33] ==> Parameters: 
+[TRACE] [2020-10-06 12:33] <==    Columns: EMPNO, EMPNAME, TITLE, MANAGER, SALARY, DNO
+[TRACE] [2020-10-06 12:33] <==        Row: 4377, ÀÌ¼º·¡, 1, null, 5000000, 2
+[TRACE] [2020-10-06 12:33] <==        Row: 3426, ¹Ú¿µ±Ç, 3, 4377, 3000000, 1
+[TRACE] [2020-10-06 12:33] <==        Row: 3011, ÀÌ¼ö¹Î, 2, 4377, 4000000, 3
+[TRACE] [2020-10-06 12:33] <==        Row: 3427, ÃÖÁ¾Ã¶, 5, 3011, 1500000, 3
+[TRACE] [2020-10-06 12:33] <==        Row: 1003, Á¶¹ÎÈñ, 3, 4377, 3000000, 2
+[TRACE] [2020-10-06 12:33] <==        Row: 2106, ±èÃ¢¼·, 4, 1003, 2500000, 2
+[TRACE] [2020-10-06 12:33] <==        Row: 1365, ±è»ó¿ø, 5, 3426, 1500000, 1
+[DEBUG] [2020-10-06 12:33] <==      Total: 7
+[DEBUG] [2020-10-06 12:33] test02InsertEmployee()
+[DEBUG] [2020-10-06 12:33] ==>  Preparing: INSERT INTO EMPLOYEE(EMPNO, EMPNAME, TITLE, MANAGER, SALARY, DNO) VALUES (?, ?, ?, ?, ?, ?)
+[DEBUG] [2020-10-06 12:33] ==> Parameters: 1004(Integer), ±èÀÚ¹Ù(String), 1(String), 4377(Integer), 3000000(Integer), 1(Integer)
+[DEBUG] [2020-10-06 12:33] <==    Updates: 1
+[DEBUG] [2020-10-06 12:33] test03UpdateEmployee()
+[DEBUG] [2020-10-06 12:33] ==>  Preparing: UPDATE EMPLOYEE SET EMPNAME = ?, TITLE = ?, MANAGER = ?, SALARY = ?, DNO = ? WHERE EMPNO = ?
+[DEBUG] [2020-10-06 12:33] ==> Parameters: ±è±è±è(String), 2(String), 1003(Integer), 2000000(Integer), 2(Integer), 1004(Integer)
+[DEBUG] [2020-10-06 12:33] <==    Updates: 1
+[DEBUG] [2020-10-06 12:33] test04SelectEmployeeByNo()
+[DEBUG] [2020-10-06 12:33] ==>  Preparing: SELECT EMPNO, EMPNAME, TITLE, MANAGER, SALARY, DNO FROM EMPLOYEE WHERE EMPNO = 4377
+[DEBUG] [2020-10-06 12:33] ==> Parameters: 
+[TRACE] [2020-10-06 12:33] <==    Columns: EMPNO, EMPNAME, TITLE, MANAGER, SALARY, DNO
+[TRACE] [2020-10-06 12:33] <==        Row: 4377, ÀÌ¼º·¡, 1, null, 5000000, 2
+[DEBUG] [2020-10-06 12:33] <==      Total: 1
+[DEBUG] [2020-10-06 12:33] Employee [empNo=4377, empName=ÀÌ¼º·¡, title=1, manager=null, salary=5000000, dept=null]
+[DEBUG] [2020-10-06 12:33] test05DeleteEmployee()
+[DEBUG] [2020-10-06 12:33] ==>  Preparing: DELETE FROM EMPLOYEE WHERE EMPNO = ?
+[DEBUG] [2020-10-06 12:33] ==> Parameters: 1004(Integer)
+[DEBUG] [2020-10-06 12:33] <==    Updates: 1
+[DEBUG] [2020-10-06 12:33] test01AddDepartment()
+[DEBUG] [2020-10-06 12:33] ==>  Preparing: INSERT INTO DEPARTMENT VALUES(?, ?, ?)
+[DEBUG] [2020-10-06 12:33] ==> Parameters: 5(Integer), ¸¶ÄÉÆÃ(String), 20(Integer)
+[DEBUG] [2020-10-06 12:33] <==    Updates: 1
+[DEBUG] [2020-10-06 12:33] test02DelDepartment()
+[DEBUG] [2020-10-06 12:33] ==>  Preparing: DELETE FROM DEPARTMENT WHERE DEPTNO = ?
+[DEBUG] [2020-10-06 12:33] ==> Parameters: 5(Integer)
+[DEBUG] [2020-10-06 12:33] <==    Updates: 1
+[DEBUG] [2020-10-06 12:33] test01AddEmployee()
+[DEBUG] [2020-10-06 12:33] ==>  Preparing: INSERT INTO EMPLOYEE(EMPNO, EMPNAME, TITLE, MANAGER, SALARY, DNO) VALUES (?, ?, ?, ?, ?, ?)
+[DEBUG] [2020-10-06 12:33] ==> Parameters: 1004(Integer), ±èÀÚ¹Ù(String), 1(String), 4377(Integer), 3000000(Integer), 1(Integer)
+[DEBUG] [2020-10-06 12:33] <==    Updates: 1
+[DEBUG] [2020-10-06 12:33] test02DelEmployee()
+[DEBUG] [2020-10-06 12:33] ==>  Preparing: DELETE FROM EMPLOYEE WHERE EMPNO = ?
+[DEBUG] [2020-10-06 12:33] ==> Parameters: 1004(Integer)
+[DEBUG] [2020-10-06 12:33] <==    Updates: 1
